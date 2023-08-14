@@ -39,13 +39,21 @@ const ArithmaSlideWidget = (function () {
 });
 
 const ArithmaSlideScrollHandler = (function (aws) {
+    let swipeStartY = 0;
+
     let isScrolling = false;
+    let isSwiping = false;
     let scrollTimer;
+    let swipeTimer;
 
     let pageIndex = 0;
 
     function _init (parent) {
+        parent.addEventListener('touchstart', function(e) {
+            swipeStartY = e.touches[0].clientY;}, {passive: false});
         parent.addEventListener("wheel", MouseWheelHandler, {passive: false});
+        parent.addEventListener("touchmove", TouchScrollHandler, {passive: false});
+
         if (parent !== document.body) {
             parent.onmouseover = ()=> document.body.style.setProperty('overflow','hidden','important');
             parent.onmouseout = ()=> document.body.style.removeProperty('overflow');
@@ -84,13 +92,28 @@ const ArithmaSlideScrollHandler = (function (aws) {
         }, aws.config.scrollStopCheckTimeOut);
     }
 
-    //TODO: hoeveelheid wat gescrolled wordt aanpassen naarmate de grootte van de div
+    function TouchScrollHandler(event) {
+        let diff = swipeStartY - event.touches[0].clientY;
+        if (Math.abs(diff)<20){
+            return;
+        }
+
+        if (!isSwiping){
+            slideToDirection(diff);
+        }
+
+        isSwiping = true;
+        clearTimeout( swipeTimer );
+        swipeTimer = setTimeout(function() {
+            isSwiping=false;
+        }, aws.config.scrollStopCheckTimeOut);
+    }
+
     function slidePageDown() {
         if (pageIndex < aws.getAllPages().length - 1) {
             let previousPage = aws.getAllPages()[pageIndex];
             pageIndex++;
 
-            //removes if exists
             previousPage.classList.remove(aws.config.cssAnimationOut);
             previousPage.classList.remove(aws.config.cssAnimationIn);
             previousPage.classList.remove(aws.config.cssAnimationNextIn);
@@ -107,7 +130,6 @@ const ArithmaSlideScrollHandler = (function (aws) {
 
                 let nextPage = aws.getAllPages()[pageIndex];
 
-                //removes if exists
                 nextPage.classList.remove(aws.config.cssAnimationIn);
                 nextPage.classList.remove(aws.config.cssAnimationOut);
                 nextPage.classList.remove(aws.config.cssAnimationNextIn);
