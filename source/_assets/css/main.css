@@ -1,0 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "arithma.css";
+@import "vivify.css";
+@import "custom.css";
+
+@import "customscrollbar.css";
+@import "responsive.css";

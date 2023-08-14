@@ -1,0 +1,14 @@
+/* Gradient Scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background:  linear-gradient(180deg, #38bdf8, #0ea5e9, #2563eb);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: transparent;
+    box-shadow: 0px 0px 0px 100000vh #0c1927;
+    border-radius: 8px;
+}

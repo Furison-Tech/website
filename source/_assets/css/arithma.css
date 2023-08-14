@@ -1,0 +1,98 @@
+.ArithmaSlide{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+.slideAboveOutWhole{
+    animation: saow 0.8s forwards ease-in-out;
+    animation-delay: 0.75s;
+}
+
+.slideBelowInHalf{
+    animation: sbih 0.8s forwards ease-in-out;
+    animation-delay: 0.75s;
+}
+
+.slideBelowOutHalf{
+    animation: sboh 0.8s forwards ease-in-out;
+    animation-delay: 0.75s;
+}
+
+.slideAboveInWhole{
+    animation: saiw 0.8s forwards ease-in-out;
+    animation-delay: 0.75s;
+    margin-top: -100vh;
+}
+
+@keyframes saow {
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: -100vh;
+    }
+}
+
+@keyframes sbih {
+    0%{
+        margin-top: 65vh;
+        filter: brightness(0%);
+    }
+    100%{
+        margin-top: 0;
+        filter: brightness(100%);
+    }
+}
+
+@keyframes sboh {
+    0%{
+        margin-top: 0;
+        filter: brightness(100%);
+    }
+    100%{
+        margin-top: 65vh;
+        filter: brightness(0%);
+    }
+}
+
+@keyframes saiw {
+    0%{
+        margin-top: -100vh;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+#ArithmaPaginationContainer{
+    width: fit-content;
+    margin: 0 auto;
+    top: calc(100vh - 4rem);
+    position: relative;
+    z-index: 999;
+    pointer-events: none;
+    touch-action: none;
+
+    transition-duration: 500ms;
+    transition-property: margin-top;
+}
+
+#ArithmaPaginationContainer span{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.5s;
+}
+
+.fillPaginationPoint{
+    position: relative;
+    border: 6px solid currentColor !important;
+    transition: all 0.5s;
+}

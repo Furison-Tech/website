@@ -1,0 +1,124 @@
+.animation-forwards{
+    animation-fill-mode: forwards !important;
+}
+
+.font-black, .font-extrabold{
+    font-family: 'Inter', sans-serif;
+}
+
+.font-thin, .font-extralight, .font-light, .font-normal, .font-medium, .font-semibold, .font-bold{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.code-font{
+    font-family: 'Space Mono', monospace !important;
+    font-weight: 700 !important;
+}
+
+.text-shadow-current{
+    text-shadow: 0 0 25px currentColor;
+}
+
+.text-shadow-current-extreme{
+    text-shadow: 0 0 25px currentColor, 0 0 18px currentColor, 0 0 11px currentColor;
+}
+
+.drop-shadow-current{
+    filter: drop-shadow(0px 0px 2px currentColor) drop-shadow(0px 0px 1px currentColor);
+}
+
+.drop-shadow-current-small{
+    filter: drop-shadow(0px 0px 2px currentColor);
+}
+
+.drop-shadow-current-extreme{
+    filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 13px currentColor) drop-shadow(0 0 6px currentColor);
+}
+
+.slide-footer{
+    bottom: -100%;
+    transition: bottom 1300ms;
+    transition-delay: 500ms;
+}
+
+.ArithmaSlide.slideBelowInHalf:not(.slideBelowOutHalf) .slide-footer{
+    bottom: 0;
+    transition: bottom 1300ms;
+    transition-delay: 300ms;
+}
+
+.city-fade-in{
+    opacity: 0;
+    animation: fadeIn ease-in-out 1000ms forwards;
+    animation-delay: 1000ms;
+}
+
+.unfold{
+    transform: scale(0,0);
+}
+
+@keyframes text-whipe-animation {
+    0%{
+        background-position: 100% center;
+    }
+    100%{
+        background-position: 0% center;
+    }
+}
+
+.text-wipe-in{
+    background-position: 100% center;
+    animation-name: text-whipe-animation;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.text-wipe-bg{
+    background-image: linear-gradient(-90deg, transparent 33%, transparent 33%, white 66%, white 66%);
+    background-size: 303% 100%;
+}
+
+.trans-mt-1s{
+    transition: margin-top 1s ease-in-out;
+}
+
+@keyframes hoverleft {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -105vw;
+    }
+}
+
+.par-scene-dims{
+    width: 105vw; height: 105vh;
+}
+
+.cloud-hover-left{
+    animation-name: hoverleft;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.bg-0c1929{
+    background: #0c1929;
+}
+
+@keyframes lightsweepright {
+    0%{
+        margin-left: -140px;
+    }
+    50%{
+        margin-left: calc(100vw + 10px);
+    }
+    100%{
+        margin-left: calc(100vw + 10px);
+    }
+}
+
+.light-sweep{
+    animation-name: lightsweepright;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.36,1.14,.73,-0.3);
+}
