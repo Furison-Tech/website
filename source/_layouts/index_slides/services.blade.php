@@ -1,4 +1,4 @@
-<div class="ArithmaSlide" style="z-index: 2">
+<div class="ArithmaSlide" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
         <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
              src="/assets/images/city_night.jpg" alt="city pond at night">
@@ -107,5 +107,3 @@
         </div>
     </div>
 </div>
-
-@include('_layouts.scripts.service_carousel')

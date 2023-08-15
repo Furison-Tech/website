@@ -5,28 +5,77 @@
     </div>
 </div>
 
-
 <script>
+    let carouselInterval = null;
+    let oldScreenSmallEnough = false;
+
+    function slideRowUp(serviceRows){
+        serviceRows.forEach((serviceRow)=>{
+            let firstEl = serviceRow.children[0];
+            let nextHr = firstEl.nextElementSibling;
+            firstEl.style.marginTop = "-56px";
+            setTimeout(function () {
+                serviceRow.removeChild(firstEl);
+                serviceRow.removeChild(nextHr);
+                firstEl.style.marginTop = 0;
+                serviceRow.appendChild(nextHr);
+                serviceRow.appendChild(firstEl);
+            }, 1000);
+        });
+    }
+
+    window.addEventListener("resize", () => {
+        manageCarousel();
+    });
+
+    let serviceSlideLoaded = false;
+    function manageCarousel(){
+        if (document.getElementById('services-slide')===null){
+            return;
+        }
+
+        let screenSmallEnough = window.matchMedia("(max-width: 1023px)").matches;
+        if (screenSmallEnough && !oldScreenSmallEnough){
+            let serviceRows = document.querySelectorAll("[data-frs-service-carousel]");
+            carouselInterval = setInterval(function () {
+                slideRowUp(serviceRows);
+            }, 4000);
+        } else if (!screenSmallEnough && oldScreenSmallEnough && carouselInterval!==null){
+            clearInterval(carouselInterval);
+            carouselInterval=null;
+        }
+        oldScreenSmallEnough = screenSmallEnough;
+    }
+
+
+
     let in_out_anims = [
-        /* titles */
         ['driveInLeft', 'driveOutLeft'],
         ['driveInRight', 'driveOutRight'],
-        ['fadeIn', 'fadeOut'], /* buttons */
+        ['fadeIn', 'fadeOut'],
         ['text-wipe-in', 'swoopOutTop'],
 
-        ['rollInBottom', 'rollOutLeft'], /* icons */
-        ['pullUp', 'fold'], /* cards */
-        ['spinIn', 'spinOut'], /* logo */
+        ['rollInBottom', 'rollOutLeft'],
+        ['pullUp', 'fold'],
     ]
 
     let asw;
     let apc;
     let slides_count;
     let slide_index = 0;
+
+    let lazyHtmlSlides = [
+        `@include('_layouts.index_slides.intro')`,
+        `@include('_layouts.index_slides.services')`,
+        `@include('_layouts.index_slides.bottom')`,
+    ];
+
     document.addEventListener("DOMContentLoaded", function() {
         apc = document.getElementById('ArithmaPaginationContainer');
         let paginationpoints = [];
-        slides_count = document.querySelectorAll('.ArithmaSlide').length;
+
+        slides_count = document.querySelectorAll('.ArithmaSlide').length + lazyHtmlSlides.length;
+
         for(let i = 0; i<slides_count; i++){
             let point = document.createElement('span');
             point.classList.add('my-2', 'glassify-bg');
@@ -37,13 +86,10 @@
             paginationpoints.push(point);
         }
 
-        asw = new window.ArithmaSlides.ArithmaSlideWidget();
-
-        asw.config.scrollStopCheckTimeOut = 150;
+        asw = new SlideWidget();
 
         asw.config.cssAnimationIn = 'slideAboveInWhole';
         asw.config.cssAnimationOut = 'slideAboveOutWhole';
-
         asw.config.cssAnimationNextIn = 'slideBelowInHalf';
         asw.config.cssAnimationNextOut = 'slideBelowOutHalf';
 
@@ -53,13 +99,20 @@
             }
             slide_index = newPageIndex;
 
+            if (!serviceSlideLoaded && newPageIndex === 2){
+                serviceSlideLoaded = true;
+                setTimeout(function (){
+                    manageCarousel();
+                }, 2000);
+            }
+
             setTimeout(shiftPaginationHandler, 500*(+(slide_index===slides_count-1)+1));
 
             paginationpoints[previousPageIndex].classList.remove('fillPaginationPoint');
             paginationpoints[newPageIndex].classList.add('fillPaginationPoint');
 
-            let previousSlide = asw.getAllPages()[previousPageIndex];
-            let newSlide = asw.getAllPages()[newPageIndex];
+            let previousSlide = asw.getAllLoadedPages()[previousPageIndex];
+            let newSlide = asw.getAllLoadedPages()[newPageIndex];
 
             let newSlideEls = newSlide.querySelectorAll("*");
             for (let i = 0; i<newSlideEls.length; i++){
@@ -98,6 +151,6 @@
             shiftPaginationHandler();
         })
 
-        asw.init();
+        asw.init(lazyHtmlSlides);
     });
 </script>

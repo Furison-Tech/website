@@ -12,8 +12,8 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=f67c25431e20d8debb2751508ba4cd12">
-        <script defer src="/assets/build/js/main.js?id=b6b141120702e80b45574033d7f05c46"></script>
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=00688402f832b000b4807535ea69cd43">
+        <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
     <body class="w-screen overflow-x-hidden relative">
 
@@ -99,89 +99,92 @@
 </nav>
 
         <main id="app" class="relative">
-                <div class="ArithmaSlide" style="z-index: 4; background: #0c1929">
+                <script>
+    let imagesLoaded = 0;
+
+    function handleImageLoad(){
+        imagesLoaded++;
+
+        if (imagesLoaded===14){
+            document.getElementById('parallax-scene').classList.remove('opacity-0');
+        }
+    }
+</script>
+
+<div class="ArithmaSlide bg-0c1929" style="z-index: 4;">
     <div class="relative"
          style="background: linear-gradient(to top, #0c1929, rgba(12,25,42,0.15) 24%, rgba(12,25,42,0.1));">
 
-        <div id="parallax-scene" class="absolute bg-cover bg-top city-fade-in"
-             style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;
-             background: #0c1929; width: 105vw; height: 105vh;">
+        <div id="parallax-scene" class="absolute par-scene-dims bg-0c1929 opacity-0 transition-opacity duration-1000 delay-1000"
+             style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;">
 
             <div class="par-scene-dims" data-depth="0.24">
                 <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
-                    <img class="par-scene-dims object-cover object-top cloud-hover-left opacity-50 flex-none"
-                         src="/assets/images/landing/cloud1.png" alt="clouds" style="animation-duration: 160s">
-                    <img class="par-scene-dims object-cover object-top opacity-50 flex-none"
-                         src="/assets/images/landing/cloud1.png" alt="clouds">
+                    <img class="par-scene-dims object-contain object-top cloud-hover-left opacity-50 flex-none"
+                         src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()"
+                         style="animation-duration: 160s">
+                    <img class="par-scene-dims object-contain object-top opacity-50 flex-none"
+                         src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()">
                 </div>
             </div>
 
             <div class="w-full h-full" data-depth="0.2">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/base.png" alt="skyline">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/base.webp" alt="skyline">
             </div>
 
             <div class="w-full h-full" data-depth="0.18">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b1.png" alt="building 1">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b1.webp" alt="building 1">
             </div>
 
             <div class="w-full h-full" data-depth="0.16">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b2.png" alt="building 2">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b2.webp" alt="building 2">
             </div>
-
-            <div class="w-full h-full" data-depth="0.08">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b3.png" alt="building 3">
-            </div>
-
+            
             <div class="w-full h-full" data-depth="0.14">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b4.png" alt="building 4">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b4.webp" alt="building 4">
             </div>
 
             <div class="w-full h-full" data-depth="0.1">
-                <img class="w-full h-full object-cover object-bottom" style="margin-top: 15vh"
-                     src="/assets/images/landing/b5.png" alt="building 5">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()" style="margin-top: 15vh"
+                     src="/assets/images/landing/b5.webp" alt="building 5">
             </div>
 
             <div class="w-full h-full" data-depth="0.16">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b6.png" alt="building 6">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b6.webp" alt="building 6">
             </div>
 
             <div class="w-full h-full" data-depth="0.08">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b7.png" alt="building 7">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b7.webp" alt="building 7">
             </div>
 
             <div class="w-full h-full" data-depth="0.14">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b8.png" alt="building 8">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b8.webp" alt="building 8">
             </div>
 
             <div class="w-full h-full" data-depth="0.12">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b9.png" alt="building 9">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b9.webp" alt="building 9">
             </div>
 
             <div class="w-full h-full" data-depth="0.04">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b10.png" alt="building 10">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.02">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b11.png" alt="bush 11">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b10.webp" alt="building 10">
             </div>
 
             <div class="par-scene-dims" data-depth="0.2">
                 <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
-                    <img class="par-scene-dims object-cover object-top cloud-hover-left flex-none"
-                         src="/assets/images/landing/cloud2.png" alt="clouds" style="animation-duration: 100s">
-                    <img class="par-scene-dims object-cover object-top flex-none"
-                         src="/assets/images/landing/cloud2.png" alt="clouds">
+                    <img class="par-scene-dims object-contain object-top cloud-hover-left flex-none"
+                         src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()"
+                         style="animation-duration: 100s">
+                    <img class="par-scene-dims object-contain object-top flex-none"
+                         src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()">
                 </div>
             </div>
         </div>
@@ -209,7 +212,264 @@
             invertY: false
         });
     });
-</script>    <div class="ArithmaSlide" style="z-index: 3">
+</script>
+    <script>
+    const SlideWidget = (function () {
+        let allPages;
+        let lazyPages;
+        let scrollHandler;
+
+        const ConfigMap = {
+            scrollStopCheckTimeOut: 150,
+        };
+
+        function _init(lazyPagesHtmlString){
+            scrollHandler = new SlideScrollHandler(this);
+            lazyPages = lazyPagesHtmlString;
+
+            document.body.style.overflow = 'hidden';
+            allPages = document.querySelectorAll('.ArithmaSlide');
+            scrollHandler.init(document.body);
+        }
+
+        function _getAllLoadedPages() {
+            return allPages;
+        }
+
+        function _getAllUnloadedPages() {
+            return lazyPages;
+        }
+
+        function _getScrollHandler() {
+            return scrollHandler;
+        }
+
+        function _regatherLoadedPages(){
+            allPages = document.querySelectorAll('.ArithmaSlide');
+        }
+
+        return {
+            init: _init,
+            getAllLoadedPages: _getAllLoadedPages,
+            getAllUnloadedPages: _getAllUnloadedPages,
+            regatherLoadedPages: _regatherLoadedPages,
+            config: ConfigMap,
+            getScrollHandler: _getScrollHandler
+        }
+    });
+
+    const SlideScrollHandler = (function (aws) {
+        let swipeStartY = 0;
+
+        let isScrolling = false;
+        let isSwiping = false;
+        let scrollTimer;
+        let swipeTimer;
+
+        let pageIndex = 0;
+
+        function _init (parent) {
+            parent.addEventListener('touchstart', function(e) {
+                swipeStartY = e.touches[0].clientY;}, {passive: false});
+            parent.addEventListener("wheel", MouseWheelHandler, {passive: false});
+            parent.addEventListener("touchmove", TouchScrollHandler, {passive: false});
+
+            if (parent !== document.body) {
+                parent.onmouseover = ()=> document.body.style.setProperty('overflow','hidden','important');
+                parent.onmouseout = ()=> document.body.style.removeProperty('overflow');
+            }
+        }
+
+        function slideToDirection(dir) {
+            let previousPageIndex = pageIndex;
+            if (dir < 0) {
+                slidePageUp();
+            } else if (dir > 0) {
+                slidePageDown();
+            }
+            if (aws.config.hasOwnProperty('pageIndexCallback')) {
+                aws.config.pageIndexCallback(previousPageIndex, pageIndex);
+            }
+        }
+
+        function _triggerUp() {
+            slideToDirection(-1);
+        }
+
+        function _triggerDown() {
+            slideToDirection(1);
+        }
+
+        function MouseWheelHandler (event) {
+            if (!isScrolling){
+                slideToDirection(event.deltaY);
+            }
+
+            isScrolling = true;
+            clearTimeout( scrollTimer );
+            scrollTimer = setTimeout(function() {
+                isScrolling=false;
+            }, aws.config.scrollStopCheckTimeOut);
+        }
+
+        function TouchScrollHandler(event) {
+            let diff = swipeStartY - event.touches[0].clientY;
+            if (Math.abs(diff)<20){
+                return;
+            }
+
+            if (!isSwiping){
+                slideToDirection(diff);
+            }
+
+            isSwiping = true;
+            clearTimeout( swipeTimer );
+            swipeTimer = setTimeout(function() {
+                isSwiping=false;
+            }, aws.config.scrollStopCheckTimeOut);
+        }
+
+        function slidePageDown() {
+            let previousPage = aws.getAllLoadedPages()[pageIndex];
+
+            if (pageIndex >= aws.getAllLoadedPages().length - 1 &&
+            aws.getAllUnloadedPages().length > 0){
+                let tempDiv = document.createElement('div');
+                previousPage.insertAdjacentElement('afterend', tempDiv);
+                tempDiv.outerHTML = aws.getAllUnloadedPages()[0];
+                aws.getAllUnloadedPages().shift();
+                aws.regatherLoadedPages();
+            }
+
+            if (pageIndex < aws.getAllLoadedPages().length - 1) {
+                pageIndex++;
+
+                previousPage.classList.remove(aws.config.cssAnimationOut);
+                previousPage.classList.remove(aws.config.cssAnimationIn);
+                previousPage.classList.remove(aws.config.cssAnimationNextIn);
+
+                previousPage.classList.add(aws.config.cssAnimationOut);
+
+                if(aws.config.hasOwnProperty('cssAnimationNextOut')){
+                    let nextPage = aws.getAllLoadedPages()[pageIndex];
+                    nextPage.classList.remove(aws.config.cssAnimationNextOut);
+                }
+
+                if(aws.config.hasOwnProperty('cssAnimationNextIn')){
+                    previousPage.classList.remove(aws.config.cssAnimationNextIn);
+
+                    let nextPage = aws.getAllLoadedPages()[pageIndex];
+
+                    nextPage.classList.remove(aws.config.cssAnimationIn);
+                    nextPage.classList.remove(aws.config.cssAnimationOut);
+                    nextPage.classList.remove(aws.config.cssAnimationNextIn);
+
+
+                    nextPage.classList.add(aws.config.cssAnimationNextIn);
+                }
+            } else if (aws.config.hasOwnProperty('noSlideDown')) {
+                aws.config.noSlideDown();
+            }
+        }
+
+        function slidePageUp () {
+            if (pageIndex !== 0) {
+
+                let previousPage = aws.getAllLoadedPages()[pageIndex];
+                if (aws.config.hasOwnProperty('cssAnimationNextOut')) {
+                    aws.getAllLoadedPages()[pageIndex]
+                        .classList.add(aws.config.cssAnimationNextOut);
+                }
+                if (aws.config.hasOwnProperty('cssAnimationNextIn')) {
+                    aws.getAllLoadedPages()[pageIndex]
+                        .classList.add(aws.config.cssAnimationNextIn);
+                }
+                previousPage.classList.remove(aws.config.cssAnimationIn);
+                previousPage.classList.remove(aws.config.cssAnimationOut);
+
+                pageIndex--;
+                let nextPage = aws.getAllLoadedPages()[pageIndex];
+                nextPage.classList.add(aws.config.cssAnimationIn);
+            } else if (aws.config.hasOwnProperty('noSlideUp')) {
+                aws.config.noSlideUp();
+            }
+        }
+
+        return {
+            init: _init,
+            triggerUp: _triggerUp,
+            triggerDown: _triggerDown
+        }
+    });
+
+</script>    <div class="absolute w-screen h-screen">
+    <div class="relative h-screen">
+        <div id="ArithmaPaginationContainer" class="text-sky-400 city-fade-in">
+        </div>
+    </div>
+</div>
+
+<script>
+    let carouselInterval = null;
+    let oldScreenSmallEnough = false;
+
+    function slideRowUp(serviceRows){
+        serviceRows.forEach((serviceRow)=>{
+            let firstEl = serviceRow.children[0];
+            let nextHr = firstEl.nextElementSibling;
+            firstEl.style.marginTop = "-56px";
+            setTimeout(function () {
+                serviceRow.removeChild(firstEl);
+                serviceRow.removeChild(nextHr);
+                firstEl.style.marginTop = 0;
+                serviceRow.appendChild(nextHr);
+                serviceRow.appendChild(firstEl);
+            }, 1000);
+        });
+    }
+
+    window.addEventListener("resize", () => {
+        manageCarousel();
+    });
+
+    let serviceSlideLoaded = false;
+    function manageCarousel(){
+        if (document.getElementById('services-slide')===null){
+            return;
+        }
+
+        let screenSmallEnough = window.matchMedia("(max-width: 1023px)").matches;
+        if (screenSmallEnough && !oldScreenSmallEnough){
+            let serviceRows = document.querySelectorAll("[data-frs-service-carousel]");
+            carouselInterval = setInterval(function () {
+                slideRowUp(serviceRows);
+            }, 4000);
+        } else if (!screenSmallEnough && oldScreenSmallEnough && carouselInterval!==null){
+            clearInterval(carouselInterval);
+            carouselInterval=null;
+        }
+        oldScreenSmallEnough = screenSmallEnough;
+    }
+
+
+
+    let in_out_anims = [
+        ['driveInLeft', 'driveOutLeft'],
+        ['driveInRight', 'driveOutRight'],
+        ['fadeIn', 'fadeOut'],
+        ['text-wipe-in', 'swoopOutTop'],
+
+        ['rollInBottom', 'rollOutLeft'],
+        ['pullUp', 'fold'],
+    ]
+
+    let asw;
+    let apc;
+    let slides_count;
+    let slide_index = 0;
+
+    let lazyHtmlSlides = [
+        `<div class="ArithmaSlide" style="z-index: 3">
     <div class="w-screen bg-cover overflow-x-hidden bg-center relative">
         <img class="w-screen absolute h-screen object-cover object-center" style="z-index: -2;"
              src="/assets/images/code.jpg" alt="code screen on desk">
@@ -263,7 +523,8 @@
         </div>
     </div>
 </div>
-    <div class="ArithmaSlide" style="z-index: 2">
+`,
+        `<div class="ArithmaSlide" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
         <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
              src="/assets/images/city_night.jpg" alt="city pond at night">
@@ -483,50 +744,8 @@
             </div>
         </div>
     </div>
-</div>
-
-<script>
-    let carouselInterval = null;
-    let oldScreenSmallEnough = false;
-
-    function slideRowUp(serviceRows){
-        serviceRows.forEach((serviceRow)=>{
-            let firstEl = serviceRow.children[0];
-            let nextHr = firstEl.nextElementSibling;
-            firstEl.style.marginTop = "-56px";
-            setTimeout(function () {
-                serviceRow.removeChild(firstEl);
-                serviceRow.removeChild(nextHr);
-                firstEl.style.marginTop = 0;
-                serviceRow.appendChild(nextHr);
-                serviceRow.appendChild(firstEl);
-            }, 1000);
-        });
-    }
-
-    document.addEventListener("DOMContentLoaded", function (){
-        manageCarousel();
-    });
-
-    window.addEventListener("resize", () => {
-        manageCarousel();
-    });
-
-    function manageCarousel(){
-        let screenSmallEnough = window.matchMedia("(max-width: 1023px)").matches;
-        if (screenSmallEnough && !oldScreenSmallEnough){
-            let serviceRows = document.querySelectorAll("[data-frs-service-carousel]");
-            carouselInterval = setInterval(function () {
-                slideRowUp(serviceRows);
-            }, 4000);
-        } else if (!screenSmallEnough && oldScreenSmallEnough && carouselInterval!==null){
-            clearInterval(carouselInterval);
-            carouselInterval=null;
-        }
-        oldScreenSmallEnough = screenSmallEnough;
-    }
-
-</script>    <div class="ArithmaSlide" style="z-index: 1">
+</div>`,
+        `<div class="ArithmaSlide" style="z-index: 1">
     <div class="relative" style="background: linear-gradient(to left, rgba(12,25,41,1) 45%, rgba(12,25,41,0.95) 53%, rgba(12,25,41,0.9) 57%,
     rgba(12,25,41,0.75) 65%, rgba(12,25,41,0.55) 100%);">
         <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
@@ -744,36 +963,15 @@
     </div>
 </div>
 
+`,
+    ];
 
-    <div class="absolute w-screen h-screen">
-    <div class="relative h-screen">
-        <div id="ArithmaPaginationContainer" class="text-sky-400 city-fade-in">
-        </div>
-    </div>
-</div>
-
-
-<script>
-    let in_out_anims = [
-        /* titles */
-        ['driveInLeft', 'driveOutLeft'],
-        ['driveInRight', 'driveOutRight'],
-        ['fadeIn', 'fadeOut'], /* buttons */
-        ['text-wipe-in', 'swoopOutTop'],
-
-        ['rollInBottom', 'rollOutLeft'], /* icons */
-        ['pullUp', 'fold'], /* cards */
-        ['spinIn', 'spinOut'], /* logo */
-    ]
-
-    let asw;
-    let apc;
-    let slides_count;
-    let slide_index = 0;
     document.addEventListener("DOMContentLoaded", function() {
         apc = document.getElementById('ArithmaPaginationContainer');
         let paginationpoints = [];
-        slides_count = document.querySelectorAll('.ArithmaSlide').length;
+
+        slides_count = document.querySelectorAll('.ArithmaSlide').length + lazyHtmlSlides.length;
+
         for(let i = 0; i<slides_count; i++){
             let point = document.createElement('span');
             point.classList.add('my-2', 'glassify-bg');
@@ -784,13 +982,10 @@
             paginationpoints.push(point);
         }
 
-        asw = new window.ArithmaSlides.ArithmaSlideWidget();
-
-        asw.config.scrollStopCheckTimeOut = 150;
+        asw = new SlideWidget();
 
         asw.config.cssAnimationIn = 'slideAboveInWhole';
         asw.config.cssAnimationOut = 'slideAboveOutWhole';
-
         asw.config.cssAnimationNextIn = 'slideBelowInHalf';
         asw.config.cssAnimationNextOut = 'slideBelowOutHalf';
 
@@ -800,13 +995,20 @@
             }
             slide_index = newPageIndex;
 
+            if (!serviceSlideLoaded && newPageIndex === 2){
+                serviceSlideLoaded = true;
+                setTimeout(function (){
+                    manageCarousel();
+                }, 2000);
+            }
+
             setTimeout(shiftPaginationHandler, 500*(+(slide_index===slides_count-1)+1));
 
             paginationpoints[previousPageIndex].classList.remove('fillPaginationPoint');
             paginationpoints[newPageIndex].classList.add('fillPaginationPoint');
 
-            let previousSlide = asw.getAllPages()[previousPageIndex];
-            let newSlide = asw.getAllPages()[newPageIndex];
+            let previousSlide = asw.getAllLoadedPages()[previousPageIndex];
+            let newSlide = asw.getAllLoadedPages()[newPageIndex];
 
             let newSlideEls = newSlide.querySelectorAll("*");
             for (let i = 0; i<newSlideEls.length; i++){
@@ -845,7 +1047,7 @@
             shiftPaginationHandler();
         })
 
-        asw.init();
+        asw.init(lazyHtmlSlides);
     });
 </script>
         </main>

@@ -1,86 +1,89 @@
-<div class="ArithmaSlide" style="z-index: 4; background: #0c1929">
+<script>
+    let imagesLoaded = 0;
+
+    function handleImageLoad(){
+        imagesLoaded++;
+
+        if (imagesLoaded===14){
+            document.getElementById('parallax-scene').classList.remove('opacity-0');
+        }
+    }
+</script>
+
+<div class="ArithmaSlide bg-0c1929" style="z-index: 4;">
     <div class="relative"
          style="background: linear-gradient(to top, #0c1929, rgba(12,25,42,0.15) 24%, rgba(12,25,42,0.1));">
 
-        <div id="parallax-scene" class="absolute bg-cover bg-top city-fade-in"
-             style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;
-             background: #0c1929; width: 105vw; height: 105vh;">
+        <div id="parallax-scene" class="absolute par-scene-dims bg-0c1929 opacity-0 transition-opacity duration-1000 delay-1000"
+             style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;">
 
             <div class="par-scene-dims" data-depth="0.24">
                 <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
-                    <img class="par-scene-dims object-cover object-top cloud-hover-left opacity-50 flex-none"
-                         src="/assets/images/landing/cloud1.png" alt="clouds" style="animation-duration: 160s">
-                    <img class="par-scene-dims object-cover object-top opacity-50 flex-none"
-                         src="/assets/images/landing/cloud1.png" alt="clouds">
+                    <img class="par-scene-dims object-contain object-top cloud-hover-left opacity-50 flex-none"
+                         src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()"
+                         style="animation-duration: 160s">
+                    <img class="par-scene-dims object-contain object-top opacity-50 flex-none"
+                         src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()">
                 </div>
             </div>
 
             <div class="w-full h-full" data-depth="0.2">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/base.png" alt="skyline">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/base.webp" alt="skyline">
             </div>
 
             <div class="w-full h-full" data-depth="0.18">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b1.png" alt="building 1">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b1.webp" alt="building 1">
             </div>
 
             <div class="w-full h-full" data-depth="0.16">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b2.png" alt="building 2">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b2.webp" alt="building 2">
             </div>
-
-            <div class="w-full h-full" data-depth="0.08">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b3.png" alt="building 3">
-            </div>
-
+            
             <div class="w-full h-full" data-depth="0.14">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b4.png" alt="building 4">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b4.webp" alt="building 4">
             </div>
 
             <div class="w-full h-full" data-depth="0.1">
-                <img class="w-full h-full object-cover object-bottom" style="margin-top: 15vh"
-                     src="/assets/images/landing/b5.png" alt="building 5">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()" style="margin-top: 15vh"
+                     src="/assets/images/landing/b5.webp" alt="building 5">
             </div>
 
             <div class="w-full h-full" data-depth="0.16">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b6.png" alt="building 6">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b6.webp" alt="building 6">
             </div>
 
             <div class="w-full h-full" data-depth="0.08">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b7.png" alt="building 7">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b7.webp" alt="building 7">
             </div>
 
             <div class="w-full h-full" data-depth="0.14">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b8.png" alt="building 8">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b8.webp" alt="building 8">
             </div>
 
             <div class="w-full h-full" data-depth="0.12">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b9.png" alt="building 9">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b9.webp" alt="building 9">
             </div>
 
             <div class="w-full h-full" data-depth="0.04">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b10.png" alt="building 10">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.02">
-                <img class="w-full h-full object-cover object-bottom"
-                     src="/assets/images/landing/b11.png" alt="bush 11">
+                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+                     src="/assets/images/landing/b10.webp" alt="building 10">
             </div>
 
             <div class="par-scene-dims" data-depth="0.2">
                 <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
-                    <img class="par-scene-dims object-cover object-top cloud-hover-left flex-none"
-                         src="/assets/images/landing/cloud2.png" alt="clouds" style="animation-duration: 100s">
-                    <img class="par-scene-dims object-cover object-top flex-none"
-                         src="/assets/images/landing/cloud2.png" alt="clouds">
+                    <img class="par-scene-dims object-contain object-top cloud-hover-left flex-none"
+                         src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()"
+                         style="animation-duration: 100s">
+                    <img class="par-scene-dims object-contain object-top flex-none"
+                         src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()">
                 </div>
             </div>
         </div>
