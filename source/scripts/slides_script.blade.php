@@ -99,7 +99,7 @@
 
         function TouchScrollHandler(event) {
             let diff = swipeStartY - event.touches[0].clientY;
-            if (Math.abs(diff)<20){
+            if (Math.abs(diff)<50){
                 return;
             }
 
