@@ -1,4 +1,4 @@
-<div class="ArithmaSlide" style="z-index: 1">
+<div class="ArithmaSlide trans-mt-slide" style="z-index: 1">
     <div class="relative" style="background: linear-gradient(to left, rgba(12,25,41,1) 45%, rgba(12,25,41,0.95) 53%, rgba(12,25,41,0.9) 57%,
     rgba(12,25,41,0.75) 65%, rgba(12,25,41,0.55) 100%);">
         <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
@@ -7,21 +7,23 @@
         <div class="table md:block container mx-auto px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
-                    <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white md:mt-0
-                    driveOutRight delay-200 animation-forwards capitalize w-fit mx-auto mb-8 md:mb-0">
-                        Tools And <br>
-                        <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
-                            Techniques
-                        </span>
-                    </h3>
+                    <div class="driveOutRight animation-forwards delay-200 w-fit mx-auto md:mx-0">
+                        <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white
+                        capitalize w-fit mx-auto mb-8 md:mb-0">
+                            Tools And <br>
+                            <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
+                                Techniques
+                            </span>
+                        </h3>
 
-                    <div class="md:hidden lg:block frs-hide-small driveOutRight delay-200 animation-forwards mt-8">
-                        <p class="text-white font-normal text-center md:text-left">
-                            Delivering IT services to businesses and consumers.<br>
-                        </p>
+                        <div class="md:hidden lg:block frs-hide-small mt-8">
+                            <p class="text-white font-normal text-center md:text-left">
+                                Delivering IT services to businesses and consumers.<br>
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="fadeOut duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0">
+                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0">
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
                         border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
@@ -156,7 +158,7 @@
             </div>
         </div>
 
-        <div class="absolute w-screen slide-footer" style="z-index: 1;">
+        <div id="footer-wrapper" class="absolute w-screen trans-slide-footer bottom-[-100%]" style="z-index: 1">
             @include('_layouts.footer')
         </div>
     </div>

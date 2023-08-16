@@ -35,16 +35,9 @@
     filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 13px currentColor) drop-shadow(0 0 6px currentColor);
 }
 
-.slide-footer{
-    bottom: -100%;
+.trans-slide-footer{
     transition: bottom 1300ms;
     transition-delay: 500ms;
-}
-
-.ArithmaSlide.slideBelowInHalf:not(.slideBelowOutHalf) .slide-footer{
-    bottom: 0;
-    transition: bottom 1300ms;
-    transition-delay: 300ms;
 }
 
 .city-fade-in{
@@ -80,6 +73,10 @@
 
 .trans-mt-1s{
     transition: margin-top 1s ease-in-out;
+}
+
+.trans-mt-slide{
+    transition: margin-top 0.8s ease-in-out 0.75s;
 }
 
 @keyframes hoverleft {

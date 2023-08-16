@@ -112,7 +112,7 @@ description: "Learn more about the bangerly service."
                     </p>
                 </div>
 
-                <img class="w-full object-cover block rounded" alt="bangerly profile screen"
+                <img class="w-full object-cover block rounded order-first md:order-last" alt="bangerly profile screen"
                      src="/assets/images/services/bangerly/screen2.jfif">
             </div>
 

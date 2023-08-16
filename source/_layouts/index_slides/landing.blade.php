@@ -1,16 +1,4 @@
-<script>
-    let imagesLoaded = 0;
-
-    function handleImageLoad(){
-        imagesLoaded++;
-
-        if (imagesLoaded===14){
-            document.getElementById('parallax-scene').classList.remove('opacity-0');
-        }
-    }
-</script>
-
-<div class="ArithmaSlide bg-0c1929" style="z-index: 4;">
+<div id="landing-slide" class="ArithmaSlide bg-0c1929 trans-mt-slide" style="z-index: 4;">
     <div class="relative"
          style="background: linear-gradient(to top, #0c1929, rgba(12,25,42,0.15) 24%, rgba(12,25,42,0.1));">
 
@@ -101,24 +89,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    const isUserUsingMobile = () => {
-        let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (!isMobile) {
-            isMobile = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
-        }
-        return isMobile
-    }
-
-    document.addEventListener('DOMContentLoaded', function (){
-        if (!isUserUsingMobile()){
-            let scene = document.getElementById('parallax-scene');
-            let parallaxInstance = new Parallax(scene, {
-                relativeInput: true,
-                invertX: false,
-                invertY: false
-            });
-        }
-    });
-</script>

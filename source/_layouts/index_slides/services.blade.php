@@ -1,4 +1,4 @@
-<div class="ArithmaSlide" style="z-index: 2" id="services-slide">
+<div class="ArithmaSlide trans-mt-slide" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
         <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
              src="/assets/images/city_night.jpg" alt="city pond at night">
@@ -7,22 +7,21 @@
         <div class="container mx-auto px-4 relative">
             <div class="flex h-screen items-center">
 
-                <div class="flex flex-col w-fit mx-auto frs-hide-big">
-                    <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize fadeIn animation-forwards
-                    capitalize duration-1250">
+                <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250">
+                    <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize">
                         Furison's<br>
                         <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
                             Services
                         </span>
                     </h2>
 
-                    <div class="fadeIn animation-forwards duration-1250 mt-8 w-fit mx-auto md:mx-0">
+                    <div class="mt-8 w-fit mx-auto md:mx-0">
                         <p class="text-white font-normal text-center md:text-left">
                             Mainly focused on developing ready-to-use software/web applications.<br>
                         </p>
                     </div>
 
-                    <div class="fadeOut inline-block duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0">
+                    <div class="inline-block mt-8 w-fit mx-auto md:mx-0">
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
                         border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"

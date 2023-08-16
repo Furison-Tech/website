@@ -3,12 +3,14 @@
         let allPages;
         let lazyPages;
         let scrollHandler;
+        let limitAnimations;
 
         const ConfigMap = {
             scrollStopCheckTimeOut: 150,
         };
 
-        function _init(lazyPagesHtmlString){
+        function _init(lazyPagesHtmlString, lowEndDevice){
+            limitAnimations = lowEndDevice;
             scrollHandler = new SlideScrollHandler(this);
             lazyPages = lazyPagesHtmlString;
 
@@ -33,12 +35,17 @@
             allPages = document.querySelectorAll('.ArithmaSlide');
         }
 
+        function _isLimitAnimations() {
+            return limitAnimations;
+        }
+
         return {
             init: _init,
             getAllLoadedPages: _getAllLoadedPages,
             getAllUnloadedPages: _getAllUnloadedPages,
             regatherLoadedPages: _regatherLoadedPages,
             config: ConfigMap,
+            isLimitAnimations: _isLimitAnimations,
             getScrollHandler: _getScrollHandler
         }
     });
@@ -122,12 +129,18 @@
                 let tempDiv = document.createElement('div');
                 previousPage.insertAdjacentElement('afterend', tempDiv);
                 tempDiv.outerHTML = aws.getAllUnloadedPages()[0];
+                previousPage.nextElementSibling.classList.add(aws.isLimitAnimations() ? 'relative' : 'absolute');
                 aws.getAllUnloadedPages().shift();
                 aws.regatherLoadedPages();
             }
 
             if (pageIndex < aws.getAllLoadedPages().length - 1) {
                 pageIndex++;
+
+                if (aws.isLimitAnimations()){
+                    previousPage.classList.add(aws.config.cssAnimationOut);
+                    return;
+                }
 
                 previousPage.classList.remove(aws.config.cssAnimationOut);
                 previousPage.classList.remove(aws.config.cssAnimationIn);
@@ -159,22 +172,26 @@
 
         function slidePageUp () {
             if (pageIndex !== 0) {
-
+                let nextPage = aws.getAllLoadedPages()[pageIndex-1];
                 let previousPage = aws.getAllLoadedPages()[pageIndex];
-                if (aws.config.hasOwnProperty('cssAnimationNextOut')) {
-                    aws.getAllLoadedPages()[pageIndex]
-                        .classList.add(aws.config.cssAnimationNextOut);
-                }
-                if (aws.config.hasOwnProperty('cssAnimationNextIn')) {
-                    aws.getAllLoadedPages()[pageIndex]
-                        .classList.add(aws.config.cssAnimationNextIn);
-                }
-                previousPage.classList.remove(aws.config.cssAnimationIn);
-                previousPage.classList.remove(aws.config.cssAnimationOut);
 
+                if (aws.isLimitAnimations()){
+                    nextPage.classList.remove(aws.config.cssAnimationOut);
+                } else {
+                    if (aws.config.hasOwnProperty('cssAnimationNextOut')) {
+                        aws.getAllLoadedPages()[pageIndex]
+                            .classList.add(aws.config.cssAnimationNextOut);
+                    }
+                    if (aws.config.hasOwnProperty('cssAnimationNextIn')) {
+                        aws.getAllLoadedPages()[pageIndex]
+                            .classList.add(aws.config.cssAnimationNextIn);
+                    }
+                    previousPage.classList.remove(aws.config.cssAnimationIn);
+                    previousPage.classList.remove(aws.config.cssAnimationOut);
+
+                    nextPage.classList.add(aws.config.cssAnimationIn);
+                }
                 pageIndex--;
-                let nextPage = aws.getAllLoadedPages()[pageIndex];
-                nextPage.classList.add(aws.config.cssAnimationIn);
             } else if (aws.config.hasOwnProperty('noSlideUp')) {
                 aws.config.noSlideUp();
             }

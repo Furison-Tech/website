@@ -1,5 +1,5 @@
-<div class="absolute w-screen h-screen">
-    <div class="relative h-screen">
+<div class="fixed w-screen top-0 left-0 z-20 h-[42px]">
+    <div class="relative">
         <div id="ArithmaPaginationContainer" class="text-sky-400 city-fade-in">
         </div>
     </div>
@@ -52,12 +52,15 @@
     let in_out_anims = [
         ['driveInLeft', 'driveOutLeft'],
         ['driveInRight', 'driveOutRight'],
-        ['fadeIn', 'fadeOut'],
         ['text-wipe-in', 'swoopOutTop'],
 
         ['rollInBottom', 'rollOutLeft'],
         ['pullUp', 'fold'],
-    ]
+        ['bottom-0', 'bottom-[-100%]']
+    ];
+    if (!limitAnimations){
+        in_out_anims.push(['fadeIn', 'fadeOut']);
+    }
 
     let asw;
     let apc;
@@ -88,10 +91,14 @@
 
         asw = new SlideWidget();
 
-        asw.config.cssAnimationIn = 'slideAboveInWhole';
-        asw.config.cssAnimationOut = 'slideAboveOutWhole';
-        asw.config.cssAnimationNextIn = 'slideBelowInHalf';
-        asw.config.cssAnimationNextOut = 'slideBelowOutHalf';
+        if (!limitAnimations){
+            asw.config.cssAnimationIn = 'slideAboveInWhole';
+            asw.config.cssAnimationOut = 'slideAboveOutWhole';
+            asw.config.cssAnimationNextIn = 'slideBelowInHalf';
+            asw.config.cssAnimationNextOut = 'slideBelowOutHalf';
+        } else {
+            asw.config.cssAnimationOut = '-mt-[100vh]';
+        }
 
         asw.config.pageIndexCallback = function (previousPageIndex, newPageIndex){
             if (previousPageIndex===newPageIndex){
@@ -149,8 +156,8 @@
 
         window.addEventListener('resize', function (){
             shiftPaginationHandler();
-        })
+        });
 
-        asw.init(lazyHtmlSlides);
+        asw.init(lazyHtmlSlides, limitAnimations);
     });
 </script>

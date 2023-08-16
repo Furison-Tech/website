@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
     </head>
-    <body class="w-screen overflow-x-hidden relative">
+    <body class="w-screen overflow-x-hidden relative bg-0c1929">
 
         @include('_layouts.header')
 

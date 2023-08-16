@@ -12,10 +12,10 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=00688402f832b000b4807535ea69cd43">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=e70ae208526e9f2d2ff81f801fc7a205">
         <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
-    <body class="w-screen overflow-x-hidden relative">
+    <body class="w-screen overflow-x-hidden relative bg-0c1929">
 
         <nav class="glassify-full fixed w-full z-20 top-0 left-0 border-t-0 border-x-0">
     <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
@@ -100,18 +100,31 @@
 
         <main id="app" class="relative">
                 <script>
-    let imagesLoaded = 0;
+        let imagesLoaded = 0;
 
-    function handleImageLoad(){
-        imagesLoaded++;
+        function handleImageLoad(){
+            imagesLoaded++;
 
-        if (imagesLoaded===14){
-            document.getElementById('parallax-scene').classList.remove('opacity-0');
+            if (imagesLoaded===14){
+                document.getElementById('parallax-scene').classList.remove('opacity-0');
+            }
         }
-    }
-</script>
 
-<div class="ArithmaSlide bg-0c1929" style="z-index: 4;">
+        function isLessPowerfullDevice(requiredCores){
+            let isLessPowerfull = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (!isLessPowerfull) {
+                isLessPowerfull = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+            }
+            if (!isLessPowerfull <= 2) {
+                isLessPowerfull = navigator.hardwareConcurrency < requiredCores
+            }
+            return isLessPowerfull
+        }
+
+        const limitAnimations = isLessPowerfullDevice(6);
+    </script>
+
+    <div id="landing-slide" class="ArithmaSlide bg-0c1929 trans-mt-slide" style="z-index: 4;">
     <div class="relative"
          style="background: linear-gradient(to top, #0c1929, rgba(12,25,42,0.15) 24%, rgba(12,25,42,0.1));">
 
@@ -202,38 +215,34 @@
         </div>
     </div>
 </div>
+    <script>
+        document.getElementById('landing-slide').classList.add(limitAnimations ? 'relative' : 'absolute');
 
-<script>
-    const isUserUsingMobile = () => {
-        let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (!isMobile) {
-            isMobile = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
-        }
-        return isMobile
-    }
+        document.addEventListener('DOMContentLoaded', function (){
+            if (!limitAnimations){
+                let scene = document.getElementById('parallax-scene');
+                let parallaxInstance = new Parallax(scene, {
+                    relativeInput: true,
+                    invertX: false,
+                    invertY: false
+                });
+            }
+        });
+    </script>
 
-    document.addEventListener('DOMContentLoaded', function (){
-        if (!isUserUsingMobile()){
-            let scene = document.getElementById('parallax-scene');
-            let parallaxInstance = new Parallax(scene, {
-                relativeInput: true,
-                invertX: false,
-                invertY: false
-            });
-        }
-    });
-</script>
     <script>
     const SlideWidget = (function () {
         let allPages;
         let lazyPages;
         let scrollHandler;
+        let limitAnimations;
 
         const ConfigMap = {
             scrollStopCheckTimeOut: 150,
         };
 
-        function _init(lazyPagesHtmlString){
+        function _init(lazyPagesHtmlString, lowEndDevice){
+            limitAnimations = lowEndDevice;
             scrollHandler = new SlideScrollHandler(this);
             lazyPages = lazyPagesHtmlString;
 
@@ -258,12 +267,17 @@
             allPages = document.querySelectorAll('.ArithmaSlide');
         }
 
+        function _isLimitAnimations() {
+            return limitAnimations;
+        }
+
         return {
             init: _init,
             getAllLoadedPages: _getAllLoadedPages,
             getAllUnloadedPages: _getAllUnloadedPages,
             regatherLoadedPages: _regatherLoadedPages,
             config: ConfigMap,
+            isLimitAnimations: _isLimitAnimations,
             getScrollHandler: _getScrollHandler
         }
     });
@@ -347,12 +361,18 @@
                 let tempDiv = document.createElement('div');
                 previousPage.insertAdjacentElement('afterend', tempDiv);
                 tempDiv.outerHTML = aws.getAllUnloadedPages()[0];
+                previousPage.nextElementSibling.classList.add(aws.isLimitAnimations() ? 'relative' : 'absolute');
                 aws.getAllUnloadedPages().shift();
                 aws.regatherLoadedPages();
             }
 
             if (pageIndex < aws.getAllLoadedPages().length - 1) {
                 pageIndex++;
+
+                if (aws.isLimitAnimations()){
+                    previousPage.classList.add(aws.config.cssAnimationOut);
+                    return;
+                }
 
                 previousPage.classList.remove(aws.config.cssAnimationOut);
                 previousPage.classList.remove(aws.config.cssAnimationIn);
@@ -384,22 +404,26 @@
 
         function slidePageUp () {
             if (pageIndex !== 0) {
-
+                let nextPage = aws.getAllLoadedPages()[pageIndex-1];
                 let previousPage = aws.getAllLoadedPages()[pageIndex];
-                if (aws.config.hasOwnProperty('cssAnimationNextOut')) {
-                    aws.getAllLoadedPages()[pageIndex]
-                        .classList.add(aws.config.cssAnimationNextOut);
-                }
-                if (aws.config.hasOwnProperty('cssAnimationNextIn')) {
-                    aws.getAllLoadedPages()[pageIndex]
-                        .classList.add(aws.config.cssAnimationNextIn);
-                }
-                previousPage.classList.remove(aws.config.cssAnimationIn);
-                previousPage.classList.remove(aws.config.cssAnimationOut);
 
+                if (aws.isLimitAnimations()){
+                    nextPage.classList.remove(aws.config.cssAnimationOut);
+                } else {
+                    if (aws.config.hasOwnProperty('cssAnimationNextOut')) {
+                        aws.getAllLoadedPages()[pageIndex]
+                            .classList.add(aws.config.cssAnimationNextOut);
+                    }
+                    if (aws.config.hasOwnProperty('cssAnimationNextIn')) {
+                        aws.getAllLoadedPages()[pageIndex]
+                            .classList.add(aws.config.cssAnimationNextIn);
+                    }
+                    previousPage.classList.remove(aws.config.cssAnimationIn);
+                    previousPage.classList.remove(aws.config.cssAnimationOut);
+
+                    nextPage.classList.add(aws.config.cssAnimationIn);
+                }
                 pageIndex--;
-                let nextPage = aws.getAllLoadedPages()[pageIndex];
-                nextPage.classList.add(aws.config.cssAnimationIn);
             } else if (aws.config.hasOwnProperty('noSlideUp')) {
                 aws.config.noSlideUp();
             }
@@ -412,8 +436,8 @@
         }
     });
 
-</script>    <div class="absolute w-screen h-screen">
-    <div class="relative h-screen">
+</script>    <div class="fixed w-screen top-0 left-0 z-20 h-[42px]">
+    <div class="relative">
         <div id="ArithmaPaginationContainer" class="text-sky-400 city-fade-in">
         </div>
     </div>
@@ -466,12 +490,15 @@
     let in_out_anims = [
         ['driveInLeft', 'driveOutLeft'],
         ['driveInRight', 'driveOutRight'],
-        ['fadeIn', 'fadeOut'],
         ['text-wipe-in', 'swoopOutTop'],
 
         ['rollInBottom', 'rollOutLeft'],
         ['pullUp', 'fold'],
-    ]
+        ['bottom-0', 'bottom-[-100%]']
+    ];
+    if (!limitAnimations){
+        in_out_anims.push(['fadeIn', 'fadeOut']);
+    }
 
     let asw;
     let apc;
@@ -479,7 +506,7 @@
     let slide_index = 0;
 
     let lazyHtmlSlides = [
-        `<div class="ArithmaSlide" style="z-index: 3">
+        `<div class="ArithmaSlide trans-mt-slide" style="z-index: 3">
     <div class="w-screen bg-cover overflow-x-hidden bg-center relative">
         <img class="w-screen absolute h-screen object-cover object-center" style="z-index: -2;"
              src="/assets/images/code.jpg" alt="code screen on desk">
@@ -503,21 +530,20 @@
             <div class="flex h-screen items-center">
 
                 <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">
-                    <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-white driveOutLeft delay-200
-                    animation-forwards capitalize w-fit mx-auto md:mx-0">
-                        Innovation <br>
-                        <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
-                            And Beyond
-                        </span>
-                    </h2>
+                    <div class="driveOutLeft animation-forwards delay-200 w-fit mx-auto md:mx-0">
+                        <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-8">
+                            Innovation <br>
+                            <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
+                                And Beyond
+                            </span>
+                        </h2>
 
-                    <div class="driveOutLeft animation-forwards delay-200 mt-8 w-fit mx-auto md:mx-0">
                         <p class="text-white font-normal text-center md:text-left">
                             Delivering IT services to businesses and consumers.<br>
                         </p>
                     </div>
 
-                    <div class="fadeOut inline-block duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0">
+                    <div class="fadeIn inline-block duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0">
                         <button class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
                         border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
@@ -534,7 +560,7 @@
     </div>
 </div>
 `,
-        `<div class="ArithmaSlide" style="z-index: 2" id="services-slide">
+        `<div class="ArithmaSlide trans-mt-slide" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
         <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
              src="/assets/images/city_night.jpg" alt="city pond at night">
@@ -543,22 +569,21 @@
         <div class="container mx-auto px-4 relative">
             <div class="flex h-screen items-center">
 
-                <div class="flex flex-col w-fit mx-auto frs-hide-big">
-                    <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize fadeIn animation-forwards
-                    capitalize duration-1250">
+                <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250">
+                    <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize">
                         Furison's<br>
                         <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
                             Services
                         </span>
                     </h2>
 
-                    <div class="fadeIn animation-forwards duration-1250 mt-8 w-fit mx-auto md:mx-0">
+                    <div class="mt-8 w-fit mx-auto md:mx-0">
                         <p class="text-white font-normal text-center md:text-left">
                             Mainly focused on developing ready-to-use software/web applications.<br>
                         </p>
                     </div>
 
-                    <div class="fadeOut inline-block duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0">
+                    <div class="inline-block mt-8 w-fit mx-auto md:mx-0">
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
                         border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
@@ -755,7 +780,7 @@
         </div>
     </div>
 </div>`,
-        `<div class="ArithmaSlide" style="z-index: 1">
+        `<div class="ArithmaSlide trans-mt-slide" style="z-index: 1">
     <div class="relative" style="background: linear-gradient(to left, rgba(12,25,41,1) 45%, rgba(12,25,41,0.95) 53%, rgba(12,25,41,0.9) 57%,
     rgba(12,25,41,0.75) 65%, rgba(12,25,41,0.55) 100%);">
         <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
@@ -764,21 +789,23 @@
         <div class="table md:block container mx-auto px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
-                    <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white md:mt-0
-                    driveOutRight delay-200 animation-forwards capitalize w-fit mx-auto mb-8 md:mb-0">
-                        Tools And <br>
-                        <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
-                            Techniques
-                        </span>
-                    </h3>
+                    <div class="driveOutRight animation-forwards delay-200 w-fit mx-auto md:mx-0">
+                        <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white
+                        capitalize w-fit mx-auto mb-8 md:mb-0">
+                            Tools And <br>
+                            <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
+                                Techniques
+                            </span>
+                        </h3>
 
-                    <div class="md:hidden lg:block frs-hide-small driveOutRight delay-200 animation-forwards mt-8">
-                        <p class="text-white font-normal text-center md:text-left">
-                            Delivering IT services to businesses and consumers.<br>
-                        </p>
+                        <div class="md:hidden lg:block frs-hide-small mt-8">
+                            <p class="text-white font-normal text-center md:text-left">
+                                Delivering IT services to businesses and consumers.<br>
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="fadeOut duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0">
+                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0">
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
                         border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
@@ -913,7 +940,7 @@
             </div>
         </div>
 
-        <div class="absolute w-screen slide-footer" style="z-index: 1;">
+        <div id="footer-wrapper" class="absolute w-screen trans-slide-footer bottom-[-100%]" style="z-index: 1">
             <footer class="glassify-full w-full border-x-0 border-b-0">
     <div class="container mx-auto px-4 py-4 xl:py-8">
         <div class="md:flex md:justify-between items-center">
@@ -994,10 +1021,14 @@
 
         asw = new SlideWidget();
 
-        asw.config.cssAnimationIn = 'slideAboveInWhole';
-        asw.config.cssAnimationOut = 'slideAboveOutWhole';
-        asw.config.cssAnimationNextIn = 'slideBelowInHalf';
-        asw.config.cssAnimationNextOut = 'slideBelowOutHalf';
+        if (!limitAnimations){
+            asw.config.cssAnimationIn = 'slideAboveInWhole';
+            asw.config.cssAnimationOut = 'slideAboveOutWhole';
+            asw.config.cssAnimationNextIn = 'slideBelowInHalf';
+            asw.config.cssAnimationNextOut = 'slideBelowOutHalf';
+        } else {
+            asw.config.cssAnimationOut = '-mt-[100vh]';
+        }
 
         asw.config.pageIndexCallback = function (previousPageIndex, newPageIndex){
             if (previousPageIndex===newPageIndex){
@@ -1055,11 +1086,15 @@
 
         window.addEventListener('resize', function (){
             shiftPaginationHandler();
-        })
+        });
 
-        asw.init(lazyHtmlSlides);
+        asw.init(lazyHtmlSlides, limitAnimations);
     });
 </script>
+
+    <script>
+        window.scrollTo(0, 0);
+    </script>
         </main>
 
             </body>

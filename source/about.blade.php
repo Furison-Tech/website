@@ -143,7 +143,7 @@ description: "Learn more about our vision, mission expertise & skills."
                 </div>
 
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Back-end Development</p>
+                    <p class="font-bold text-md lg:text-xl">Back-end Development & AI</p>
                     <p class="font-normal mt-4">
                         When we’re dealing with medium/large algorithms or something that is best approachable with OOP, we lean on Java & Spring.
                         For quick website setups or those that mostly rely on database logic, we prefer PHP & Laravel.
