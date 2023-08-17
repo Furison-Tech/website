@@ -36,8 +36,8 @@
 }
 
 .trans-slide-footer{
-    transition: bottom 1300ms;
-    transition-delay: 500ms;
+    transition: bottom 1000ms;
+    transition-delay: 300ms;
 }
 
 .city-fade-in{
@@ -50,25 +50,20 @@
     transform: scale(0,0);
 }
 
-@keyframes text-whipe-animation {
+@keyframes text-expand-animation {
     0%{
-        background-position: 100% center;
+        transform: scale(0);
     }
     100%{
-        background-position: 0% center;
+        transform: scale(1);
     }
 }
 
-.text-wipe-in{
-    background-position: 100% center;
-    animation-name: text-whipe-animation;
+.text-expand-effect{
+    transform: scale(0);
+    animation-name: text-expand-animation;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-.text-wipe-bg{
-    background-image: linear-gradient(-90deg, transparent 33%, transparent 33%, white 66%, white 66%);
-    background-size: 303% 100%;
+    animation-timing-function: cubic-bezier(.13,1.02,.86,1.31);
 }
 
 .trans-mt-1s{

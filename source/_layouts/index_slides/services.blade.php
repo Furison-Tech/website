@@ -1,4 +1,4 @@
-<div class="ArithmaSlide trans-mt-slide" style="z-index: 2" id="services-slide">
+<div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
         <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
              src="/assets/images/city_night.jpg" alt="city pond at night">
@@ -7,7 +7,8 @@
         <div class="container mx-auto px-4 relative">
             <div class="flex h-screen items-center">
 
-                <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250">
+                <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250"
+                     data-frs-animate>
                     <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize">
                         Furison's<br>
                         <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
@@ -36,13 +37,13 @@
 
                 <div class="w-screen frs-hide-small">
                     <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize fadeIn animation-forwards
-                    capitalize duration-1250">
+                    capitalize duration-1250" data-frs-animate>
                         Our Services
                     </h2>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 xl:gap-x-16 gap-x-8 gap-y-8 mt-12">
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-100 animation-forwards glassify-full">
+                                        duration-1000 fold delay-100 animation-forwards glassify-full" data-frs-animate="1">
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -62,7 +63,7 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-200 animation-forwards glassify-full">
+                                        duration-1000 fold delay-200 animation-forwards glassify-full" data-frs-animate="1">
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -81,7 +82,7 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-300 animation-forwards glassify-full">
+                                        duration-1000 fold delay-300 animation-forwards glassify-full" data-frs-animate="1">
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">

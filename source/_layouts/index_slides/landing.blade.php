@@ -1,11 +1,11 @@
-<div id="landing-slide" class="ArithmaSlide bg-0c1929 trans-mt-slide" style="z-index: 4;">
+<div id="landing-slide" class="ArithmaSlide bg-0c1929 transition-slide" style="z-index: 4;">
     <div class="relative"
          style="background: linear-gradient(to top, #0c1929, rgba(12,25,42,0.15) 24%, rgba(12,25,42,0.1));">
 
         <div id="parallax-scene" class="absolute par-scene-dims bg-0c1929 opacity-0 transition-opacity duration-1000 delay-1000"
              style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;">
 
-            <div class="par-scene-dims" data-depth="0.24" style="position: relative">
+            <div class="par-scene-dims" data-depth="0.24" style="position: absolute; top: 0; left: 0;">
                 <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
                     <img class="par-scene-dims object-contain object-top cloud-hover-left opacity-50 flex-none"
                          src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()"
@@ -29,7 +29,7 @@
                 <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
                      src="/assets/images/landing/b2.webp" alt="building 2">
             </div>
-            
+
             <div class="w-full h-full" data-depth="0.14" style="position: absolute; top: 0; left: 0;">
                 <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
                      src="/assets/images/landing/b4.webp" alt="building 4">
@@ -74,17 +74,19 @@
                          src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()">
                 </div>
             </div>
+
         </div>
 
         <div class="container mx-auto px-4 relative">
             <div class="flex h-screen items-center justify-center">
 
-                <div class="text-center" style="margin-top: 14px;">
-                    <h1 class="inline-block text-5xl lg:text-8xl font-black capitalize mb-0 text-wipe-bg
-                    text-transparent bg-clip-text duration-1000 delay-300 text-wipe-in">
+                <div  class="text-center duration-1000 delay-300 text-expand-effect"
+                      style="margin-top: 14px;" data-frs-animate="1">
+                    <h1 class="inline-block text-5xl lg:text-8xl font-black capitalize mb-0 text-white">
                         Furison Tech
                     </h1>
                 </div>
+
             </div>
         </div>
     </div>
