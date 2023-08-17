@@ -19,9 +19,9 @@
 
         @include('_layouts.header')
 
-        <main id="app" class="relative">
+        <div id="app" class="relative">
             @yield('body')
-        </main>
+        </div>
 
         @if($page->getUrl() !== '/')
             <div class="absolute w-screen bottom-0" style="z-index: 1;">

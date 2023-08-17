@@ -12,13 +12,13 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=37eec3345779704206fb9c1e6f455254">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=87ce75dbab978e50cb20379e0c37ccb6">
         <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
     <body class="w-screen overflow-x-hidden relative bg-0c1929">
 
-        <nav class="glassify-full fixed w-full z-20 top-0 left-0 border-t-0 border-x-0">
-    <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav class="glassify-full fixed w-full top-0 left-0 border-t-0 border-x-0" style="z-index: 9999">
+    <div class="container flex flex-wrap items-center justify-between mx-auto px-12 md:px-8 lg:px-4 py-4">
         <div class="w-fit md:w-[100px]">
             <a class="flex items-center" href="/">
                 <span class="h-8 w-8 inline-block" >
@@ -65,7 +65,7 @@
             </a>
 
             <button type="button" onclick="document.getElementById('navbar-dropdown').classList.toggle('hidden')"
-                    class="inline-flex items-center p-2 text-sm rounded-lg md:hidden ml-8
+                    class="inline-flex items-center p-2 text-sm rounded-lg md:hidden ml-4
                 focus:outline-none focus:ring-2 focus:ring-sky-400 text-gray-400">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -98,13 +98,13 @@
     </div>
 </nav>
 
-        <main id="app" class="relative">
+        <div id="app" class="relative">
                 <section class="w-screen min-h-screen bg-cover overflow-x-hidden bg-center relative"
              style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0.25)) rgba(12,25,41,0.55)">
         <img class="w-screen absolute h-full object-cover object-top" style="z-index: -1"
              src="/assets/images/setup.jpg" alt="gaming setup AI generated">
 
-            <div class="container mx-auto px-4 relative">
+            <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
                 <div class="flex min-h-screen items-center">
 
                     <div class="w-screen mt-[107px] mb-[150px] sm:mb-[127px] md:mb-[91px] xl:mb-[123px]">
@@ -288,11 +288,11 @@
                 </div>
             </div>
     </section>
-        </main>
+        </div>
 
                     <div class="absolute w-screen bottom-0" style="z-index: 1;">
                 <footer class="glassify-full w-full border-x-0 border-b-0">
-    <div class="container mx-auto px-4 py-4 xl:py-8">
+    <div class="container mx-auto px-12 md:px-8 lg:px-4 py-4 xl:py-8">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">
@@ -331,13 +331,14 @@
 
                 <span class="w-0.5 h-full bg-gray-400 inline-block mx-8 rounded-full"></span>
 
-                <div class="flex items-center w-fit ml-auto md:ml-0">
+                <div class="flex flex-col md:flex-row items-center w-fit ml-auto md:ml-0">
                     <p class="hidden lg:block code-font text-white">Legal ⋅ Info</p>
 
-                    <span class="hover:text-white transition-colors duration-200 text-gray-400 lg:ml-4">
+                    <span class="text-xs md:text-base hover:text-white
+                    transition-colors duration-200 text-gray-400 lg:ml-4">
                         KVK (COC) TBA
                     </span>
-                    <span class="hover:text-white transition-colors duration-200 text-gray-400 ml-4">
+                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200 text-gray-400 md:ml-4">
                         BTW (VAT) TBA
                     </span>
                 </div>

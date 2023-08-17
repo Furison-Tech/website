@@ -12,7 +12,7 @@ description: "How to get in touch with Furison."
         <img class="w-screen absolute h-full object-cover object-bottom" style="z-index: -1"
              src="/assets/images/moon.jpg" alt="robot arm AI generated">
 
-        <div class="container mx-auto px-4 relative">
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="flex min-h-screen items-center">
                 <div class="w-screen mt-[107px] mb-[150px] sm:mb-[127px] md:mb-[91px] xl:mb-[123px]">
                     <h1 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize fadeIn animation-forwards

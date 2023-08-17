@@ -20,17 +20,25 @@ description: "Software/Web Applications and Technologies. Innovation and Beyond!
         const limitAnimations = isLessPowerfullDevice(6, 8);
 
         let imagesLoaded = 0;
+        let expectedImages = limitAnimations ? 1 : 14;
         function handleImageLoad(){
             imagesLoaded++;
-            if (imagesLoaded===14){
+            if (imagesLoaded===expectedImages){
                 document.getElementById('parallax-scene').classList.remove('opacity-0');
             }
         }
     </script>
 
     @include('_layouts.index_slides.landing')
+    @include('_layouts.index_slides.intro')
 
     <script>
+        if (!limitAnimations){
+            document.getElementById('parallax-scene').innerHTML = `@include('_layouts.index_slides.landing_scene.parallax')`;
+        } else {
+            document.getElementById('parallax-scene').innerHTML = `@include('_layouts.index_slides.landing_scene.no-parallax')`;
+        }
+
         document.addEventListener('DOMContentLoaded', function (){
             if (!limitAnimations){
                 let scene = document.getElementById('parallax-scene');

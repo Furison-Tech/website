@@ -12,13 +12,13 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=37eec3345779704206fb9c1e6f455254">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=87ce75dbab978e50cb20379e0c37ccb6">
         <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
     <body class="w-screen overflow-x-hidden relative bg-0c1929">
 
-        <nav class="glassify-full fixed w-full z-20 top-0 left-0 border-t-0 border-x-0">
-    <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav class="glassify-full fixed w-full top-0 left-0 border-t-0 border-x-0" style="z-index: 9999">
+    <div class="container flex flex-wrap items-center justify-between mx-auto px-12 md:px-8 lg:px-4 py-4">
         <div class="w-fit md:w-[100px]">
             <a class="flex items-center" href="/">
                 <span class="h-8 w-8 inline-block" >
@@ -65,7 +65,7 @@
             </a>
 
             <button type="button" onclick="document.getElementById('navbar-dropdown').classList.toggle('hidden')"
-                    class="inline-flex items-center p-2 text-sm rounded-lg md:hidden ml-8
+                    class="inline-flex items-center p-2 text-sm rounded-lg md:hidden ml-4
                 focus:outline-none focus:ring-2 focus:ring-sky-400 text-gray-400">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -98,7 +98,7 @@
     </div>
 </nav>
 
-        <main id="app" class="relative">
+        <div id="app" class="relative">
                 <script>
         function isLessPowerfullDevice(requiredCores, requiredRam){
             let isLessPowerfull = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -113,9 +113,10 @@
         const limitAnimations = isLessPowerfullDevice(6, 8);
 
         let imagesLoaded = 0;
+        let expectedImages = limitAnimations ? 1 : 14;
         function handleImageLoad(){
             imagesLoaded++;
-            if (imagesLoaded===14){
+            if (imagesLoaded===expectedImages){
                 document.getElementById('parallax-scene').classList.remove('opacity-0');
             }
         }
@@ -128,79 +129,9 @@
         <div id="parallax-scene" class="absolute par-scene-dims bg-0c1929 opacity-0 transition-opacity duration-1000 delay-1000"
              style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;">
 
-            <div class="par-scene-dims" data-depth="0.24" style="position: absolute; top: 0; left: 0;">
-                <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
-                    <img class="par-scene-dims object-contain object-top cloud-hover-left opacity-50 flex-none"
-                         src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()"
-                         style="animation-duration: 160s">
-                    <img class="par-scene-dims object-contain object-top opacity-50 flex-none"
-                         src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()">
-                </div>
-            </div>
-
-            <div class="w-full h-full" data-depth="0.2" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/base.webp" alt="skyline">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.18" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b1.webp" alt="building 1">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.16" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b2.webp" alt="building 2">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.14" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b4.webp" alt="building 4">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.1" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()" style="margin-top: 15vh"
-                     src="/assets/images/landing/b5.webp" alt="building 5">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.16" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b6.webp" alt="building 6">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.08" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b7.webp" alt="building 7">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.14" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b8.webp" alt="building 8">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.12" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b9.webp" alt="building 9">
-            </div>
-
-            <div class="w-full h-full" data-depth="0.04" style="position: absolute; top: 0; left: 0;">
-                <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
-                     src="/assets/images/landing/b10.webp" alt="building 10">
-            </div>
-
-            <div class="par-scene-dims" data-depth="0.2" style="position: absolute; top: 0; left: 0;">
-                <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
-                    <img class="par-scene-dims object-contain object-top cloud-hover-left flex-none"
-                         src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()"
-                         style="animation-duration: 100s">
-                    <img class="par-scene-dims object-contain object-top flex-none"
-                         src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()">
-                </div>
-            </div>
-
         </div>
 
-        <div class="container mx-auto px-4 relative">
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="flex h-screen items-center justify-center">
 
                 <div  class="text-center duration-1000 delay-300 text-expand-effect"
@@ -213,8 +144,141 @@
             </div>
         </div>
     </div>
+</div>    <div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 3">
+    <div class="w-screen bg-cover overflow-x-hidden bg-center relative">
+        <img class="w-screen absolute h-screen object-cover object-center" style="z-index: -2;"
+             src="/assets/images/code.jpg" alt="code screen on desk">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     id="circles-bg" viewBox="0 0 960 540" class="w-screen absolute h-screen"
+     style="z-index: -1; background: linear-gradient(to right, #0c1929 50%, rgba(12,25,41,0))">
+    <g fill="transparent" class="stroke-sky-400">
+        <rect class="animate-pulse" width="107" height="107" x="646" y="382"/>
+        <rect class="animate-pulse delay-200 stroke-teal-400" width="27" height="27"  x="634" y="88"/>
+        <rect class="animate-pulse delay-400" width="59" height="59"  x="498" y="400"/>
+        <rect class="animate-pulse delay-600 stroke-teal-400" width="63" height="63"  x="811" y="331"/>
+        <rect class="animate-pulse delay-800" width="78" height="78"  x="762" y="131"/>
+        <rect class="animate-pulse delay-600 stroke-indigo-400" width="37" height="37"  x="480" y="143"/>
+        <rect class="animate-pulse delay-400 stroke-indigo-400" width="52" height="52"  x="857" y="230"/>
+        <rect class="animate-pulse delay-200" width="91" height="91"  x="585" y="194"/>
+        <rect class="animate-pulse" width="45" height="45"  x="455" y="245"/>
+    </g>
+</svg>
+
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
+            <div class="flex h-screen items-center">
+
+                <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">
+                    <div class="driveOutLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
+                        <h2 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white mb-8">
+                            Innovation <br>
+                            <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
+                                And Beyond
+                            </span>
+                        </h2>
+
+                        <p class="text-white font-normal text-center md:text-left">
+                            Delivering IT services to businesses and consumers.<br>
+                        </p>
+                    </div>
+
+                    <div class="fadeIn inline-block duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0"
+                         data-frs-animate>
+                        <button class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
+                        from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2 block md:inline mx-auto md:mx-0
+                        border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
+                                onclick="asw.getScrollHandler().triggerDown()">Read ⋅ More
+                        </button>
+
+                        <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
+                        px-5 py-2.5 text-white code-font md:ml-2 mt-8 md:mt-0 text-sm border-t-0 border-x-0 block md:inline">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
     <script>
+        if (!limitAnimations){
+            document.getElementById('parallax-scene').innerHTML = `<div class="par-scene-dims" data-depth="0.24" style="position: absolute; top: 0; left: 0;">
+    <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
+        <img class="par-scene-dims object-contain object-top cloud-hover-left opacity-50 flex-none"
+             src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()"
+             style="animation-duration: 160s">
+        <img class="par-scene-dims object-contain object-top opacity-50 flex-none"
+             src="/assets/images/landing/cloud1.webp" alt="clouds" onload="handleImageLoad()">
+    </div>
+</div>
+
+<div class="w-full h-full" data-depth="0.2" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/base.webp" alt="skyline">
+</div>
+
+<div class="w-full h-full" data-depth="0.18" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b1.webp" alt="building 1">
+</div>
+
+<div class="w-full h-full" data-depth="0.16" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b2.webp" alt="building 2">
+</div>
+
+<div class="w-full h-full" data-depth="0.14" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b4.webp" alt="building 4">
+</div>
+
+<div class="w-full h-full" data-depth="0.1" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()" style="margin-top: 15vh"
+         src="/assets/images/landing/b5.webp" alt="building 5">
+</div>
+
+<div class="w-full h-full" data-depth="0.16" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b6.webp" alt="building 6">
+</div>
+
+<div class="w-full h-full" data-depth="0.08" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b7.webp" alt="building 7">
+</div>
+
+<div class="w-full h-full" data-depth="0.14" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b8.webp" alt="building 8">
+</div>
+
+<div class="w-full h-full" data-depth="0.12" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b9.webp" alt="building 9">
+</div>
+
+<div class="w-full h-full" data-depth="0.04" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/b10.webp" alt="building 10">
+</div>
+
+<div class="par-scene-dims" data-depth="0.2" style="position: absolute; top: 0; left: 0;">
+    <div class="flex par-scene-dims flex-nowrap overflow-x-hidden">
+        <img class="par-scene-dims object-contain object-top cloud-hover-left flex-none"
+             src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()"
+             style="animation-duration: 100s">
+        <img class="par-scene-dims object-contain object-top flex-none"
+             src="/assets/images/landing/cloud2.webp" alt="clouds" onload="handleImageLoad()">
+    </div>
+</div>`;
+        } else {
+            document.getElementById('parallax-scene').innerHTML = `<div class="w-full h-full" data-depth="0.2" style="position: absolute; top: 0; left: 0;">
+    <img class="w-full h-full object-cover object-bottom" onload="handleImageLoad()"
+         src="/assets/images/landing/city.webp" alt="skyline">
+</div>
+`;
+        }
+
         document.addEventListener('DOMContentLoaded', function (){
             if (!limitAnimations){
                 let scene = document.getElementById('parallax-scene');
@@ -353,7 +417,7 @@
         function slidePageDown() {
             let previousPage = aws.getAllLoadedPages()[pageIndex];
 
-            if (pageIndex >= aws.getAllLoadedPages().length - 1 &&
+            if (pageIndex+1 >= aws.getAllLoadedPages().length - 1 &&
             aws.getAllUnloadedPages().length > 0){
                 let tempDiv = document.createElement('div');
                 previousPage.insertAdjacentElement('afterend', tempDiv);
@@ -465,68 +529,13 @@
     let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
 
     let lazyHtmlSlides = [
-        `<div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 3">
-    <div class="w-screen bg-cover overflow-x-hidden bg-center relative">
-        <img class="w-screen absolute h-screen object-cover object-center" style="z-index: -2;"
-             src="/assets/images/code.jpg" alt="code screen on desk">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="circles-bg" viewBox="0 0 960 540" class="w-screen absolute h-screen"
-     style="z-index: -1; background: linear-gradient(to right, #0c1929 50%, rgba(12,25,41,0))">
-    <g fill="transparent" class="stroke-sky-400">
-        <rect class="animate-pulse" width="107" height="107" x="646" y="382"/>
-        <rect class="animate-pulse delay-200 stroke-teal-400" width="27" height="27"  x="634" y="88"/>
-        <rect class="animate-pulse delay-400" width="59" height="59"  x="498" y="400"/>
-        <rect class="animate-pulse delay-600 stroke-teal-400" width="63" height="63"  x="811" y="331"/>
-        <rect class="animate-pulse delay-800" width="78" height="78"  x="762" y="131"/>
-        <rect class="animate-pulse delay-600 stroke-indigo-400" width="37" height="37"  x="480" y="143"/>
-        <rect class="animate-pulse delay-400 stroke-indigo-400" width="52" height="52"  x="857" y="230"/>
-        <rect class="animate-pulse delay-200" width="91" height="91"  x="585" y="194"/>
-        <rect class="animate-pulse" width="45" height="45"  x="455" y="245"/>
-    </g>
-</svg>
-
-        <div class="container mx-auto px-4 relative">
-            <div class="flex h-screen items-center">
-
-                <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">
-                    <div class="driveOutLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
-                        <h2 class="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-8">
-                            Innovation <br>
-                            <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
-                                And Beyond
-                            </span>
-                        </h2>
-
-                        <p class="text-white font-normal text-center md:text-left">
-                            Delivering IT services to businesses and consumers.<br>
-                        </p>
-                    </div>
-
-                    <div class="fadeIn inline-block duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0"
-                         data-frs-animate>
-                        <button class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
-                        from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
-                        border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
-                                onclick="asw.getScrollHandler().triggerDown()">Read ⋅ More
-                        </button>
-                        <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
-                        px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0">
-                            Get In Touch
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-`,
         `<div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
         <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
              src="/assets/images/city_night.jpg" alt="city pond at night">
 
 
-        <div class="container mx-auto px-4 relative">
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="flex h-screen items-center">
 
                 <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250"
@@ -565,7 +574,9 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-3 xl:gap-x-16 gap-x-8 gap-y-8 mt-12">
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-100 animation-forwards glassify-full" data-frs-animate="1">
+                                        duration-1000 fold delay-100 animation-forwards glassify-full"
+                             data-frs-animate="1" style="will-change: transform">
+
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -643,7 +654,9 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-200 animation-forwards glassify-full" data-frs-animate="1">
+                                        duration-1000 fold delay-200 animation-forwards glassify-full"
+                             data-frs-animate="1" style="will-change: transform">
+
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -678,7 +691,9 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-300 animation-forwards glassify-full" data-frs-animate="1">
+                                        duration-1000 fold delay-300 animation-forwards glassify-full"
+                             data-frs-animate="1" style="will-change: transform">
+
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -747,7 +762,7 @@
         <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
              src="/assets/images/darkvr.jpg" alt="business man with VR headset">
 
-        <div class="table md:block container mx-auto px-4 relative">
+        <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
                     <div class="driveOutRight animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
@@ -766,15 +781,16 @@
                         </div>
                     </div>
 
-                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0"
+                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-16 md:mb-0"
                          data-frs-animate>
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
-                        from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
-                        border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
+                        from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2 border-blue-600
+                        focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
                                 href="/about">About ⋅ Us
                         </a>
+
                         <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
-                        px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0">
+                        px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0 hidden md:inline-block">
                             Get In Touch
                         </a>
                     </div>
@@ -905,7 +921,7 @@
         <div id="footer-wrapper" class="absolute w-screen trans-slide-footer bottom-[-100%]"
              style="z-index: 1" data-frs-animate="1">
             <footer class="glassify-full w-full border-x-0 border-b-0">
-    <div class="container mx-auto px-4 py-4 xl:py-8">
+    <div class="container mx-auto px-12 md:px-8 lg:px-4 py-4 xl:py-8">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">
@@ -944,13 +960,14 @@
 
                 <span class="w-0.5 h-full bg-gray-400 inline-block mx-8 rounded-full"></span>
 
-                <div class="flex items-center w-fit ml-auto md:ml-0">
+                <div class="flex flex-col md:flex-row items-center w-fit ml-auto md:ml-0">
                     <p class="hidden lg:block code-font text-white">Legal ⋅ Info</p>
 
-                    <span class="hover:text-white transition-colors duration-200 text-gray-400 lg:ml-4">
+                    <span class="text-xs md:text-base hover:text-white
+                    transition-colors duration-200 text-gray-400 lg:ml-4">
                         KVK (COC) TBA
                     </span>
-                    <span class="hover:text-white transition-colors duration-200 text-gray-400 ml-4">
+                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200 text-gray-400 md:ml-4">
                         BTW (VAT) TBA
                     </span>
                 </div>
@@ -1040,7 +1057,7 @@
     <script>
         window.scrollTo(0, 0);
     </script>
-        </main>
+        </div>
 
             </body>
 </html>

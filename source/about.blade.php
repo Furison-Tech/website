@@ -69,7 +69,7 @@ description: "Learn more about our vision, mission expertise & skills."
     </div>
 
     <div class="relative overflow-hidden bg-0c1929">
-        <div class="container mx-auto px-4 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div class="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-8 w-full md:w-auto">

@@ -4,7 +4,7 @@
         <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
              src="/assets/images/darkvr.jpg" alt="business man with VR headset">
 
-        <div class="table md:block container mx-auto px-4 relative">
+        <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
                     <div class="driveOutRight animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
@@ -23,15 +23,16 @@
                         </div>
                     </div>
 
-                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0"
+                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-16 md:mb-0"
                          data-frs-animate>
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
-                        from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2
-                        border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
+                        from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2 border-blue-600
+                        focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
                                 href="/about">About ⋅ Us
                         </a>
+
                         <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
-                        px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0">
+                        px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0 hidden md:inline-block">
                             Get In Touch
                         </a>
                     </div>

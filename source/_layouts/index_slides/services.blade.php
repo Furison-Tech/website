@@ -4,7 +4,7 @@
              src="/assets/images/city_night.jpg" alt="city pond at night">
 
 
-        <div class="container mx-auto px-4 relative">
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="flex h-screen items-center">
 
                 <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250"
@@ -43,7 +43,9 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-3 xl:gap-x-16 gap-x-8 gap-y-8 mt-12">
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-100 animation-forwards glassify-full" data-frs-animate="1">
+                                        duration-1000 fold delay-100 animation-forwards glassify-full"
+                             data-frs-animate="1" style="will-change: transform">
+
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -63,7 +65,9 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-200 animation-forwards glassify-full" data-frs-animate="1">
+                                        duration-1000 fold delay-200 animation-forwards glassify-full"
+                             data-frs-animate="1" style="will-change: transform">
+
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">
@@ -82,7 +86,9 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-300 animation-forwards glassify-full" data-frs-animate="1">
+                                        duration-1000 fold delay-300 animation-forwards glassify-full"
+                             data-frs-animate="1" style="will-change: transform">
+
                             <div class="w-full">
                                 <div class="flex">
                                     <p class="text-md lg:text-xl font-bold text-white">

@@ -81,7 +81,7 @@ description: "Learn more about the bangerly service."
     </div>
 
     <div class="relative overflow-hidden bg-0c1929">
-        <div class="container mx-auto px-4 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
+        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <img class="w-full object-cover block rounded" alt="bangerly community content screen"

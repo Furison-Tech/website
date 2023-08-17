@@ -1,5 +1,5 @@
 <footer class="glassify-full w-full border-x-0 border-b-0">
-    <div class="container mx-auto px-4 py-4 xl:py-8">
+    <div class="container mx-auto px-12 md:px-8 lg:px-4 py-4 xl:py-8">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">
@@ -38,13 +38,14 @@
 
                 <span class="w-0.5 h-full bg-gray-400 inline-block mx-8 rounded-full"></span>
 
-                <div class="flex items-center w-fit ml-auto md:ml-0">
+                <div class="flex flex-col md:flex-row items-center w-fit ml-auto md:ml-0">
                     <p class="hidden lg:block code-font text-white">Legal ⋅ Info</p>
 
-                    <span class="hover:text-white transition-colors duration-200 text-gray-400 lg:ml-4">
+                    <span class="text-xs md:text-base hover:text-white
+                    transition-colors duration-200 text-gray-400 lg:ml-4">
                         KVK (COC) TBA
                     </span>
-                    <span class="hover:text-white transition-colors duration-200 text-gray-400 ml-4">
+                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200 text-gray-400 md:ml-4">
                         BTW (VAT) TBA
                     </span>
                 </div>

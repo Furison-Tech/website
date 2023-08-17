@@ -73,7 +73,6 @@
     let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
 
     let lazyHtmlSlides = [
-        `@include('_layouts.index_slides.intro')`,
         `@include('_layouts.index_slides.services')`,
         `@include('_layouts.index_slides.bottom')`,
     ];

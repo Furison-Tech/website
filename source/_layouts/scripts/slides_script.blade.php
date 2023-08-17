@@ -124,7 +124,7 @@
         function slidePageDown() {
             let previousPage = aws.getAllLoadedPages()[pageIndex];
 
-            if (pageIndex >= aws.getAllLoadedPages().length - 1 &&
+            if (pageIndex+1 >= aws.getAllLoadedPages().length - 1 &&
             aws.getAllUnloadedPages().length > 0){
                 let tempDiv = document.createElement('div');
                 previousPage.insertAdjacentElement('afterend', tempDiv);
