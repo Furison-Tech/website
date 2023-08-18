@@ -36,7 +36,7 @@
 }
 
 .trans-slide-footer{
-    transition: bottom 1000ms;
+    transition: transform 1000ms;
     transition-delay: 300ms;
 }
 

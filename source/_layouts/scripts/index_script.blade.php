@@ -58,7 +58,7 @@
 
         ['rollInBottom', 'rollOutLeft'],
         ['pullUp', 'fold'],
-        ['bottom-0', 'bottom-[-100%]']
+        ['translate-y-0', 'translate-y-full']
     ];
     if (!limitAnimations){
         in_out_anims.push(['fadeIn', 'fadeOut']);

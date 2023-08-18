@@ -14,7 +14,7 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=89d87c56551f8d64c0abcbe2e637a118">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=2205a9ea066b709da25aaff2d92245e2">
         <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
     <body class="w-screen overflow-x-hidden relative bg-0c1929">
@@ -589,7 +589,11 @@
             </div>
         </div>
 
-        <div id="footer-wrapper" class="absolute w-screen trans-slide-footer bottom-[-100%]"
+    </div>
+
+
+    <div class="h-[100dvh] w-screen absolute flex items-end top-0 left-0">
+        <div id="footer-wrapper" class="relative w-screen trans-slide-footer translate-y-full"
              style="z-index: 1" data-frs-animate="1">
             <footer class="glassify-full w-full border-x-0 border-b-0">
     <div class="container mx-auto px-12 md:px-8 lg:px-4 py-4 xl:py-8">
@@ -650,8 +654,6 @@
         </div>
     </div>
 </div>
-
-
     <script>
         if (!limitAnimations){
             document.getElementById('parallax-scene').innerHTML = `<div class="par-scene-dims" data-depth="0.24" style="position: absolute; top: 0; left: 0;">
@@ -960,7 +962,7 @@
 
         ['rollInBottom', 'rollOutLeft'],
         ['pullUp', 'fold'],
-        ['bottom-0', 'bottom-[-100%]']
+        ['translate-y-0', 'translate-y-full']
     ];
     if (!limitAnimations){
         in_out_anims.push(['fadeIn', 'fadeOut']);

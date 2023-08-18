@@ -160,10 +160,13 @@
             </div>
         </div>
 
-        <div id="footer-wrapper" class="absolute w-screen trans-slide-footer bottom-[-100%]"
+    </div>
+
+
+    <div class="h-[100dvh] w-screen absolute flex items-end top-0 left-0">
+        <div id="footer-wrapper" class="relative w-screen trans-slide-footer translate-y-full"
              style="z-index: 1" data-frs-animate="1">
             @include('_layouts.footer')
         </div>
     </div>
 </div>
-
