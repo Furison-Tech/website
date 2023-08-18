@@ -2,7 +2,7 @@
     <div class="relative" style="background: linear-gradient(to left, rgba(12,25,41,1) 45%, rgba(12,25,41,0.95) 53%, rgba(12,25,41,0.9) 57%,
     rgba(12,25,41,0.75) 65%, rgba(12,25,41,0.55) 100%);">
         <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
-             src="/assets/images/darkvr.jpg" alt="business man with VR headset">
+             data-frs-src="/assets/images/darkvr.jpg" alt="business man with VR headset">
 
         <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">

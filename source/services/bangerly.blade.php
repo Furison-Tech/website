@@ -9,18 +9,17 @@ description: "Learn more about the bangerly service."
 
     <div class="absolute w-screen h-screen">
         <div class="relative w-screen h-screen">
-            <img class="w-screen h-full object-cover object-bottom"
+            <img class="relative w-screen h-full object-cover object-bottom" style="z-index: 1"
                  src="/assets/images/dronecity.jpg" alt="drone in city AI generated">
             <div class="absolute top-0 w-screen h-screen"
-                 style="background: linear-gradient(to top, #0c1929 33%, rgba(12,25,41,0.25));"></div>
+                 style="background: linear-gradient(to top, #0c1929 33%, rgba(12,25,41,0.25)); z-index: 2"></div>
+            <img class="w-screen fixed h-full object-cover object-top" style="z-index: 0; top: 0;"
+                 src="/assets/images/tablet.jpg" alt="business man on tablet AI generated">
         </div>
     </div>
 
-    <img class="w-screen fixed h-full object-cover object-top" style="z-index: -2"
-         src="/assets/images/tablet.jpg" alt="business man on tablet AI generated">
 
-
-    <div class="relative" style="z-index: 0">
+    <div class="relative" style="z-index: 3">
         <div class="flex min-h-screen">
             <div class="inline-block mt-[107px] w-fit mx-auto px-4 pb-32">
 
@@ -75,7 +74,7 @@ description: "Learn more about the bangerly service."
         </div>
     </div>
 
-    <div class="h-[6px] overflow-hidden" style="background: #050c13">
+    <div class="h-[6px] overflow-hidden relative" style="background: #050c13; z-index: 4;">
         <span class="block w-[80px] h-[6px] bg-gradient-to-r light-sweep duration-8000
         from-indigo-400 via-sky-400 to-teal-400"></span>
     </div>

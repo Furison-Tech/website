@@ -8,3 +8,7 @@
 
 @import "customscrollbar.css";
 @import "responsive.css";
+
+html{
+    background-color: #0c1929;
+}

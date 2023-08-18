@@ -1,4 +1,4 @@
-<div class="flex gap-2 py-2 items-center trans-mt-1s">
+<div class="flex gap-2 py-2 items-center trans-mt-500ms">
     <div class="flex-none">
         <img width="40" height="40" loading="lazy" class="rounded-md"
              src="/assets/images/appicons/appicon_placeholder.jpg" alt="tailglass logo">
@@ -19,7 +19,7 @@
 
 <hr class="opacity-50">
 
-<div class="flex gap-2 py-2 items-center trans-mt-1s">
+<div class="flex gap-2 py-2 items-center trans-mt-500ms">
     <div class="flex-none">
         <img width="40" height="40" loading="lazy" class="rounded-md"
              src="/assets/images/appicons/appicon_placeholder.jpg" alt="unnamed app 2 logo">

@@ -6,11 +6,18 @@ description: "The (app) projects that Furison works on."
 @extends('_layouts.main')
 
 @section('body')
-    <section class="w-screen min-h-screen bg-cover overflow-x-hidden bg-center relative"
-             style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0.25)) rgba(12,25,41,0.55)">
-        <img class="w-screen absolute h-full object-cover object-top" style="z-index: -1"
-             src="/assets/images/setup.jpg" alt="gaming setup AI generated">
+    <div class="absolute w-screen h-screen">
+        <div class="relative w-screen h-screen">
+            <div class="absolute top-0 w-screen h-screen"
+                 style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0.25)) rgba(12,25,41,0.55);
+                  z-index: 1;"></div>
 
+            <img class="w-screen absolute h-full object-cover object-top" style="z-index: 0; top: 0;"
+                 src="/assets/images/setup.jpg" alt="gaming setup AI generated">
+        </div>
+    </div>
+
+    <section class="w-screen min-h-screen bg-cover overflow-x-hidden bg-center relative" style="z-index: 2">
             <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
                 <div class="flex min-h-screen items-center">
 

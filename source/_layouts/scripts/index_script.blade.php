@@ -17,14 +17,14 @@
         serviceRows.forEach((serviceRow)=>{
             let firstEl = serviceRow.children[0];
             let nextHr = firstEl.nextElementSibling;
-            firstEl.style.marginTop = "-56px";
+            firstEl.style.marginTop = "-57px";
             setTimeout(function () {
                 serviceRow.removeChild(firstEl);
                 serviceRow.removeChild(nextHr);
                 firstEl.style.marginTop = 0;
                 serviceRow.appendChild(nextHr);
                 serviceRow.appendChild(firstEl);
-            }, 1000);
+            }, 500);
         });
     }
 
@@ -51,8 +51,6 @@
         oldScreenSmallEnough = screenSmallEnough;
     }
 
-
-
     let in_out_anims = [
         ['driveInLeft', 'driveOutLeft'],
         ['driveInRight', 'driveOutRight'],
@@ -71,11 +69,6 @@
     let slides_count = 4;
     let slide_index = 0;
     let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
-
-    let lazyHtmlSlides = [
-        `@include('_layouts.index_slides.services')`,
-        `@include('_layouts.index_slides.bottom')`,
-    ];
 
     document.addEventListener("DOMContentLoaded", function() {
         apc = document.getElementById('ArithmaPaginationContainer');
@@ -144,6 +137,6 @@
             shiftPaginationHandler();
         });
 
-        asw.init(lazyHtmlSlides, limitAnimations);
+        asw.init();
     });
 </script>

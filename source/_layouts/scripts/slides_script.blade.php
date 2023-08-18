@@ -1,18 +1,15 @@
 <script>
     const SlideWidget = (function () {
         let allPages;
-        let lazyPages;
+        let loadedPages = 1;
         let scrollHandler;
-        let limitAnimations;
 
         const ConfigMap = {
             scrollStopCheckTimeOut: 150,
         };
 
-        function _init(lazyPagesHtmlString, lowEndDevice){
-            limitAnimations = lowEndDevice;
+        function _init(){
             scrollHandler = new SlideScrollHandler(this);
-            lazyPages = lazyPagesHtmlString;
 
             document.body.style.overflow = 'hidden';
             allPages = Array.from(document.querySelectorAll('.ArithmaSlide'));
@@ -23,16 +20,16 @@
             return allPages;
         }
 
-        function _getAllUnloadedPages() {
-            return lazyPages;
-        }
-
         function _getScrollHandler() {
             return scrollHandler;
         }
 
-        function _addLoadedPage(lazyLoadedPage){
-            allPages.push(lazyLoadedPage);
+        function _addLoadedPage(){
+            loadedPages++;
+        }
+
+        function _getLoadedPagesCount() {
+            return loadedPages;
         }
 
         function _isLimitAnimations() {
@@ -42,10 +39,9 @@
         return {
             init: _init,
             getAllLoadedPages: _getAllLoadedPages,
-            getAllUnloadedPages: _getAllUnloadedPages,
+            getLoadedPagesCount: _getLoadedPagesCount,
             addLoadedPage: _addLoadedPage,
             config: ConfigMap,
-            isLimitAnimations: _isLimitAnimations,
             getScrollHandler: _getScrollHandler
         }
     });
@@ -124,18 +120,16 @@
         function slidePageDown() {
             let previousPage = aws.getAllLoadedPages()[pageIndex];
 
-            if (pageIndex+1 >= aws.getAllLoadedPages().length - 1 &&
-            aws.getAllUnloadedPages().length > 0){
-                let tempDiv = document.createElement('div');
-                previousPage.insertAdjacentElement('afterend', tempDiv);
-                tempDiv.outerHTML = aws.getAllUnloadedPages()[0];
-                aws.getAllUnloadedPages().shift();
-                aws.addLoadedPage(previousPage.nextElementSibling);
-            }
-
             if (pageIndex < aws.getAllLoadedPages().length - 1) {
                 pageIndex++;
                 let nextPage = aws.getAllLoadedPages()[pageIndex];
+
+                if (pageIndex > aws.getLoadedPagesCount()-1){
+                    nextPage.querySelectorAll('[data-frs-src]').forEach(el => {
+                       el.src = el.getAttribute('data-frs-src');
+                    });
+                    aws.addLoadedPage();
+                }
 
                 previousPage.classList.add(aws.config.cssClassesTopSlide);
                 nextPage.classList.remove(...aws.config.cssClassesBottomSlide);

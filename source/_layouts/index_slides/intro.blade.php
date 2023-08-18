@@ -1,7 +1,7 @@
 <div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 3">
     <div class="w-screen bg-cover overflow-x-hidden bg-center relative">
         <img class="w-screen absolute h-screen object-cover object-center" style="z-index: -2;"
-             src="/assets/images/code.jpg" alt="code screen on desk">
+             data-frs-src="/assets/images/code.jpg" alt="code screen on desk">
         @include('_layouts.components.rectbgsvg')
 
         <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">

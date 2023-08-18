@@ -66,8 +66,8 @@
     animation-timing-function: cubic-bezier(.13,1.02,.86,1.31);
 }
 
-.trans-mt-1s{
-    transition: margin-top 1s ease-in-out;
+.trans-mt-500ms{
+    transition: margin-top 500ms ease-in-out;
 }
 
 .trans-mt-slide{
