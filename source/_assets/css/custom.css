@@ -79,12 +79,12 @@
         margin-left: 0;
     }
     100%{
-        margin-left: -105vw;
+        margin-left: -105dvw;
     }
 }
 
 .par-scene-dims{
-    width: 105vw; height: 105vh;
+    width: 105dvw; height: 105dvh;
 }
 
 .cloud-hover-left{

@@ -1,6 +1,6 @@
 .ArithmaSlide{
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -15,11 +15,11 @@
 }
 
 .slide-move-up{
-    transform: translateY(-100vh);
+    transform: translateY(-100dvh);
 }
 
 .slide-start-pos{
-    transform: translateY(65vh);
+    transform: translateY(65dvh);
 }
 
 .slide-start-dark{
@@ -29,7 +29,7 @@
 #ArithmaPaginationContainer{
     width: fit-content;
     margin: 0 auto;
-    top: calc(100vh - 4rem);
+    top: calc(100dvh - 4rem);
     position: relative;
     z-index: 999;
     pointer-events: none;

@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{{ $page->description }}">
+        <meta name="theme-color" content="#0c1929">
+
         <title>{{ $page->title }}</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
