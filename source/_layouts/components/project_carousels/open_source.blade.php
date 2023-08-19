@@ -13,7 +13,7 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>
 
@@ -34,6 +34,6 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>

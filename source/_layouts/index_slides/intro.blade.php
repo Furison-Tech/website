@@ -8,7 +8,7 @@
             <div class="flex h-screen items-center">
 
                 <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">
-                    <div class="driveOutLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
+                    <div class="driveInLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>
                         <h2 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white mb-8">
                             Innovation <br>
                             <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">

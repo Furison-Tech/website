@@ -21,7 +21,7 @@
 
         @include('_layouts.header')
 
-        <div id="app" class="relative">
+        <div id="app" class="relative @if($page->getUrl() !== '/') h-[100dvh] overflow-hidden @endif">
             @yield('body')
         </div>
 

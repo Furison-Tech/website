@@ -2,6 +2,10 @@
     .frs-hide-small {
         display: none;
     }
+
+    .frs-block-small {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 767px) {

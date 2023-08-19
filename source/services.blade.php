@@ -32,7 +32,7 @@ description: "The (app) projects that Furison works on."
                                         duration-1000 unfold delay-100 animation-forwards glassify-full">
                                 <div class="w-full">
                                     <div class="flex">
-                                        <p class="text-md lg:text-xl font-bold text-white">
+                                        <p class="text-sm md:text-base lg:text-xl font-bold text-white">
                                             <span class="hidden lg:inline">Services</span> For Consumers
                                         </p>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -51,7 +51,7 @@ description: "The (app) projects that Furison works on."
                                         duration-1000 unfold delay-200 animation-forwards glassify-full">
                                 <div class="w-full">
                                     <div class="flex">
-                                        <p class="text-md lg:text-xl font-bold text-white">
+                                        <p class="text-sm md:text-base lg:text-xl font-bold text-white">
                                             <span class="hidden lg:inline">Services</span> For Businesses
                                         </p>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -70,7 +70,7 @@ description: "The (app) projects that Furison works on."
                                         duration-1000 unfold delay-300 animation-forwards glassify-full">
                                 <div class="w-full">
                                     <div class="flex">
-                                        <p class="text-md lg:text-xl font-bold text-white">
+                                        <p class="text-sm md:text-base lg:text-xl font-bold text-white">
                                             Open-Source <span class="hidden lg:inline">Projects</span>
                                         </p>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"

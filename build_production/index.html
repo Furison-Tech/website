@@ -14,7 +14,7 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=2205a9ea066b709da25aaff2d92245e2">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=50f971b29e0c35da371658187f375a01">
         <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
     <body class="w-screen overflow-x-hidden relative bg-0c1929">
@@ -100,7 +100,7 @@
     </div>
 </nav>
 
-        <div id="app" class="relative">
+        <div id="app" class="relative ">
                 <script>
         function isLessPowerfullDevice(requiredCores, requiredRam){
             let isLessPowerfull = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -170,7 +170,7 @@
             <div class="flex h-screen items-center">
 
                 <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">
-                    <div class="driveOutLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
+                    <div class="driveInLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>
                         <h2 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white mb-8">
                             Innovation <br>
                             <span class="underline decoration-sky-500 decoration-dashed underline-offset-8">
@@ -221,7 +221,7 @@
 
                     <div class="mt-8 w-fit mx-auto md:mx-0">
                         <p class="text-white font-normal text-center md:text-left">
-                            Mainly focused on developing ready-to-use software/web applications.<br>
+                            Mainly focused on developing SaaS & software/web applications.<br>
                         </p>
                     </div>
 
@@ -231,29 +231,27 @@
                         border-blue-600 focus:border-blue-800 focus:shadow-xl text-sm px-5 py-2.5 transition-colors duration-200"
                                 href="/services">Explore ⋅ All
                         </a>
-                        <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
-                        px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0">
-                            Get In Touch
-                        </a>
                     </div>
                 </div>
 
                 <div class="w-screen frs-hide-small">
-                    <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize fadeIn animation-forwards
-                    capitalize duration-1250" data-frs-animate>
+                    <h2 class="text-center text-3xl md:text-5xl lg:text-7xl font-black text-white capitalize
+                    fadeIn animation-forwards capitalize duration-1250" data-frs-animate>
                         Our Services
                     </h2>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 xl:gap-x-16 gap-x-8 gap-y-8 mt-12">
-                        <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-100 animation-forwards glassify-full"
-                             data-frs-animate="1" style="will-change: transform">
+                    <div class="block md:grid grid-cols-3 xl:gap-x-16 gap-x-8 gap-y-8 mt-8 md:mt-12">
+
+                        <div class="relative flex items-start justify-between rounded-b-none rounded-t-xl md:rounded-b-xl
+                        p-4 shadow-xl sm:p-6 lg:p-8 duration-1000 pullUp delay-100 animation-forwards glassify-full"
+                             data-frs-animate style="will-change: transform">
 
                             <div class="w-full">
                                 <div class="flex">
-                                    <p class="text-md lg:text-xl font-bold text-white">
+                                    <p class="text-sm md:text-base lg:text-xl font-bold text-white">
                                         <span class="hidden lg:inline">Services</span> For Consumers
                                     </p>
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                          class="fill-indigo-400 w-5 ml-2 text-indigo-400 drop-shadow-current-extreme">
                                         <path d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm1.5 1H8c-3.309 0-6 2.691-6 6v1h15v-1c0-3.309-2.691-6-6-6z"></path><path d="M16.604 11.048a5.67 5.67 0 0 0 .751-3.44c-.179-1.784-1.175-3.361-2.803-4.44l-1.105 1.666c1.119.742 1.8 1.799 1.918 2.974a3.693 3.693 0 0 1-1.072 2.986l-1.192 1.192 1.618.475C18.951 13.701 19 17.957 19 18h2c0-1.789-.956-5.285-4.396-6.952z"></path>
@@ -298,7 +296,7 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>
 
@@ -319,21 +317,22 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>                                </div>
                             </div>
                         </div>
 
-                        <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-200 animation-forwards glassify-full"
-                             data-frs-animate="1" style="will-change: transform">
+                        <div class="relative flex items-start justify-between rounded-none md:rounded-xl p-4 shadow-xl
+                        sm:p-6 lg:p-8 duration-1000 pullUp delay-200 animation-forwards glassify-full border-y-0 md:border-y-2"
+                             data-frs-animate style="will-change: transform">
 
                             <div class="w-full">
                                 <div class="flex">
-                                    <p class="text-md lg:text-xl font-bold text-white">
+                                    <p class="text-sm md:text-base lg:text-xl font-bold text-white">
                                         <span class="hidden lg:inline">Services</span> For Businesses
                                     </p>
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                          class="fill-sky-400 w-5 ml-2 text-sky-400 drop-shadow-current-extreme">
                                         <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v3h20V8c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm5 10h-4v-2H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-8v2z"></path>
@@ -356,21 +355,22 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>                                </div>
                             </div>
                         </div>
 
-                        <div class="relative flex items-start justify-between rounded-xl p-4 shadow-xl sm:p-6 lg:p-8
-                                        duration-1000 fold delay-300 animation-forwards glassify-full"
-                             data-frs-animate="1" style="will-change: transform">
+                        <div class="relative flex items-start justify-between rounded-t-none rounded-b-xl md:rounded-t-xl
+                        p-4 shadow-xl sm:p-6 lg:p-8 duration-1000 pullUp delay-300 animation-forwards glassify-full"
+                             data-frs-animate style="will-change: transform">
 
                             <div class="w-full">
                                 <div class="flex">
-                                    <p class="text-md lg:text-xl font-bold text-white">
+                                    <p class="text-sm md:text-base lg:text-xl font-bold text-white">
                                         Open-Source <span class="hidden lg:inline">Projects</span>
                                     </p>
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                          class="fill-teal-400 w-5 ml-2 text-teal-400 drop-shadow-current-extreme">
                                         <path d="m21.62 11.108-8.731-8.729a1.292 1.292 0 0 0-1.823 0L9.257 4.19l2.299 2.3a1.532 1.532 0 0 1 1.939 1.95l2.214 2.217a1.53 1.53 0 0 1 1.583 2.531c-.599.6-1.566.6-2.166 0a1.536 1.536 0 0 1-.337-1.662l-2.074-2.063V14.9c.146.071.286.169.407.29a1.537 1.537 0 0 1 0 2.166 1.536 1.536 0 0 1-2.174 0 1.528 1.528 0 0 1 0-2.164c.152-.15.322-.264.504-.339v-5.49a1.529 1.529 0 0 1-.83-2.008l-2.26-2.271-5.987 5.982c-.5.504-.5 1.32 0 1.824l8.731 8.729a1.286 1.286 0 0 0 1.821 0l8.69-8.689a1.284 1.284 0 0 0 .003-1.822"></path>
@@ -394,7 +394,7 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>
 
@@ -415,7 +415,7 @@
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
     flex-none code-font text-white underline decoration-sky-500 underline-offset-4 opacity-50">
-        No Info Yet
+        No Info
     </span>
 </div>
                                 </div>
@@ -436,7 +436,7 @@
         <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
-                    <div class="driveOutRight animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
+                    <div class="driveInRight animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>
                         <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white
                         capitalize w-fit mx-auto mb-8 md:mb-0">
                             Tools And <br>
@@ -445,14 +445,14 @@
                             </span>
                         </h3>
 
-                        <div class="md:hidden lg:block frs-hide-small mt-8">
+                        <div class="hidden frs-block-small lg:block mt-8">
                             <p class="text-white font-normal text-center md:text-left">
-                                Delivering IT services to businesses and consumers.<br>
+                                Expertise in currently popular and future technologies.<br>
                             </p>
                         </div>
                     </div>
 
-                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-16 md:mb-0"
+                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0"
                          data-frs-animate>
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2 border-blue-600
@@ -460,7 +460,7 @@
                                 href="/about">About ⋅ Us
                         </a>
 
-                        <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
+                        <a href="/contact" class="rounded-bl-2x l rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
                         px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0 hidden md:inline-block">
                             Get In Touch
                         </a>
@@ -591,11 +591,9 @@
 
     </div>
 
-
-    <div class="h-[100dvh] w-screen absolute flex items-end top-0 left-0">
-        <div id="footer-wrapper" class="relative w-screen trans-slide-footer translate-y-full"
-             style="z-index: 1" data-frs-animate="1">
-            <footer class="glassify-full w-full border-x-0 border-b-0">
+    <div id="footer-wrapper" class="absolute bottom-0 w-screen trans-slide-footer translate-y-full"
+         style="z-index: 1" data-frs-animate="1">
+        <footer class="glassify-full w-full border-x-0 border-b-0">
     <div class="container mx-auto px-12 md:px-8 lg:px-4 py-4 xl:py-8">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
@@ -651,8 +649,8 @@
     </div>
 </footer>
 
-        </div>
     </div>
+
 </div>
     <script>
         if (!limitAnimations){
@@ -962,19 +960,25 @@
 
         ['rollInBottom', 'rollOutLeft'],
         ['pullUp', 'fold'],
-        ['translate-y-0', 'translate-y-full']
+        ['translate-y-0', 'translate-y-full'],
+
+        ['fadeIn', 'fadeOut']
     ];
-    if (!limitAnimations){
-        in_out_anims.push(['fadeIn', 'fadeOut']);
-    }
 
     let asw;
     let apc;
     let slides_count = 4;
     let slide_index = 0;
-    let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
+
+    let anim_obj_slides = [];
 
     document.addEventListener("DOMContentLoaded", function() {
+        let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
+        let slides = document.querySelectorAll(".ArithmaSlide");
+        for (let i = 0; i < slides.length; i++) {
+            anim_obj_slides[i]=slides[i].querySelectorAll(selector);
+        }
+
         apc = document.getElementById('ArithmaPaginationContainer');
         let paginationpoints = apc.children;
 
@@ -1001,10 +1005,7 @@
             paginationpoints[previousPageIndex].classList.remove('fillPaginationPoint');
             paginationpoints[newPageIndex].classList.add('fillPaginationPoint');
 
-            let previousSlide = asw.getAllLoadedPages()[previousPageIndex];
-            let newSlide = asw.getAllLoadedPages()[newPageIndex];
-
-            let newSlideEls = newSlide.querySelectorAll(selector);
+            let newSlideEls = anim_obj_slides[newPageIndex];
             setTimeout(function () {
                 for (let i = 0; i < newSlideEls.length; i++) {
                     let element = newSlideEls[i];
@@ -1017,7 +1018,7 @@
                 }
             }, 600);
 
-            let prevSlideEls = previousSlide.querySelectorAll(selector);
+            let prevSlideEls = anim_obj_slides[previousPageIndex];
             for (let i = 0; i<prevSlideEls.length; i++){
                 let element = prevSlideEls[i];
                 for (let i = 0; i<in_out_anims.length; i++){
@@ -1046,7 +1047,11 @@
 </script>
 
     <script>
-        window.scrollTo(0, 0);
+        window.onunload = function () {
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 500);
+        };
     </script>
         </div>
 

@@ -57,6 +57,10 @@ description: "Software/Web Applications and Technologies. Innovation and Beyond!
     @include('_layouts.scripts.index_script')
 
     <script>
-        window.scrollTo(0, 0);
+        window.onunload = function () {
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 500);
+        };
     </script>
 @endsection

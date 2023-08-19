@@ -58,19 +58,25 @@
 
         ['rollInBottom', 'rollOutLeft'],
         ['pullUp', 'fold'],
-        ['translate-y-0', 'translate-y-full']
+        ['translate-y-0', 'translate-y-full'],
+
+        ['fadeIn', 'fadeOut']
     ];
-    if (!limitAnimations){
-        in_out_anims.push(['fadeIn', 'fadeOut']);
-    }
 
     let asw;
     let apc;
     let slides_count = 4;
     let slide_index = 0;
-    let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
+
+    let anim_obj_slides = [];
 
     document.addEventListener("DOMContentLoaded", function() {
+        let selector = limitAnimations ? '[data-frs-animate="1"]' : '[data-frs-animate]';
+        let slides = document.querySelectorAll(".ArithmaSlide");
+        for (let i = 0; i < slides.length; i++) {
+            anim_obj_slides[i]=slides[i].querySelectorAll(selector);
+        }
+
         apc = document.getElementById('ArithmaPaginationContainer');
         let paginationpoints = apc.children;
 
@@ -97,10 +103,7 @@
             paginationpoints[previousPageIndex].classList.remove('fillPaginationPoint');
             paginationpoints[newPageIndex].classList.add('fillPaginationPoint');
 
-            let previousSlide = asw.getAllLoadedPages()[previousPageIndex];
-            let newSlide = asw.getAllLoadedPages()[newPageIndex];
-
-            let newSlideEls = newSlide.querySelectorAll(selector);
+            let newSlideEls = anim_obj_slides[newPageIndex];
             setTimeout(function () {
                 for (let i = 0; i < newSlideEls.length; i++) {
                     let element = newSlideEls[i];
@@ -113,7 +116,7 @@
                 }
             }, 600);
 
-            let prevSlideEls = previousSlide.querySelectorAll(selector);
+            let prevSlideEls = anim_obj_slides[previousPageIndex];
             for (let i = 0; i<prevSlideEls.length; i++){
                 let element = prevSlideEls[i];
                 for (let i = 0; i<in_out_anims.length; i++){

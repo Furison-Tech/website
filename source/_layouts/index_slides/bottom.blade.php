@@ -7,7 +7,7 @@
         <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
             <div class="table-cell align-middle md:flex h-screen items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
-                    <div class="driveOutRight animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate="1">
+                    <div class="driveInRight animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>
                         <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white
                         capitalize w-fit mx-auto mb-8 md:mb-0">
                             Tools And <br>
@@ -16,14 +16,14 @@
                             </span>
                         </h3>
 
-                        <div class="md:hidden lg:block frs-hide-small mt-8">
+                        <div class="hidden frs-block-small lg:block mt-8">
                             <p class="text-white font-normal text-center md:text-left">
-                                Delivering IT services to businesses and consumers.<br>
+                                Expertise in currently popular and future technologies.<br>
                             </p>
                         </div>
                     </div>
 
-                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-16 md:mb-0"
+                    <div class="fadeIn duration-750 delay-500 animation-forwards mt-8 w-fit mx-auto md:mx-0 mb-8 md:mb-0"
                          data-frs-animate>
                         <a class="code-font rounded-br-2xl rounded-tl-2xl rounded-bl-md rounded-tr-md text-white
                         from-sky-400 via-sky-500 to-blue-600 bg-gradient-to-br border-b-2 border-blue-600
@@ -31,7 +31,7 @@
                                 href="/about">About ⋅ Us
                         </a>
 
-                        <a href="/contact" class="rounded-bl-2xl rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
+                        <a href="/contact" class="rounded-bl-2x l rounded-tr-2xl rounded-br-md rounded-tl-md glassify-full
                         px-5 py-2.5 text-white code-font ml-2 text-sm border-t-0 border-x-0 hidden md:inline-block">
                             Get In Touch
                         </a>
@@ -162,11 +162,9 @@
 
     </div>
 
-
-    <div class="h-[100dvh] w-screen absolute flex items-end top-0 left-0">
-        <div id="footer-wrapper" class="relative w-screen trans-slide-footer translate-y-full"
-             style="z-index: 1" data-frs-animate="1">
-            @include('_layouts.footer')
-        </div>
+    <div id="footer-wrapper" class="absolute bottom-0 w-screen trans-slide-footer translate-y-full"
+         style="z-index: 1" data-frs-animate="1">
+        @include('_layouts.footer')
     </div>
+
 </div>
