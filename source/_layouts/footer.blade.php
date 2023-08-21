@@ -43,7 +43,7 @@
 
                     <span class="text-xs md:text-base hover:text-white
                     transition-colors duration-200 text-gray-400 lg:ml-4">
-                        KVK (COC) TBA
+                        KVK (COC) 91055083
                     </span>
                     <span class="text-xs md:text-base hover:text-white transition-colors duration-200 text-gray-400 md:ml-4">
                         BTW (VAT) TBA

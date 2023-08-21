@@ -40,7 +40,7 @@
                     <div class="block md:grid grid-cols-3 xl:gap-x-16 gap-x-8 gap-y-8 mt-8 md:mt-12">
 
                         <div class="relative flex items-start justify-between rounded-b-none rounded-t-xl md:rounded-b-xl
-                        p-4 shadow-xl sm:p-6 lg:p-8 duration-1000 pullUp delay-100 animation-forwards glassify-full"
+                        p-4 shadow-xl sm:p-6 lg:p-8 duration-1000 pullUp delay-100 animation-forwards glassify-full transition-none"
                              data-frs-animate style="will-change: transform">
 
                             <div class="w-full">
@@ -62,7 +62,7 @@
                             </div>
                         </div>
 
-                        <div class="relative flex items-start justify-between rounded-none md:rounded-xl p-4 shadow-xl
+                        <div class="relative flex items-start justify-between rounded-none md:rounded-xl p-4 shadow-xl transition-none
                         sm:p-6 lg:p-8 duration-1000 pullUp delay-200 animation-forwards glassify-full border-y-0 md:border-y-2"
                              data-frs-animate style="will-change: transform">
 
@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="relative flex items-start justify-between rounded-t-none rounded-b-xl md:rounded-t-xl
-                        p-4 shadow-xl sm:p-6 lg:p-8 duration-1000 pullUp delay-300 animation-forwards glassify-full"
+                        p-4 shadow-xl sm:p-6 lg:p-8 duration-1000 pullUp delay-300 animation-forwards glassify-full transition-none"
                              data-frs-animate style="will-change: transform">
 
                             <div class="w-full">
