@@ -1,11 +1,11 @@
 <div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 3">
-    <div class="w-screen bg-cover overflow-x-hidden bg-center relative">
+    <div class="w-screen bg-cover h-[100dvh] overflow-hidden bg-center relative">
         <img class="w-screen absolute h-[100dvh] object-cover object-center" style="z-index: -2;"
              data-frs-src="/assets/images/code.jpg" alt="code screen on desk">
         @include('_layouts.components.rectbgsvg')
 
         <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
-            <div class="flex h-[100dvh] items-center">
+            <div class="flex h-[100svh] items-center">
 
                 <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">
                     <div class="driveInLeft animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>
