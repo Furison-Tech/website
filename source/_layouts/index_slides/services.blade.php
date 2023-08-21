@@ -1,11 +1,11 @@
 <div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 2" id="services-slide">
     <div class="relative" style="background: linear-gradient(#0c1929 50%, rgba(12,25,41,0)) rgba(12,25,41,0.45)">
-        <img class="w-screen absolute h-screen object-cover object-left-top" style="z-index: -1;"
+        <img class="w-screen absolute h-[100dvh] object-cover object-left-top" style="z-index: -1;"
              data-frs-src="/assets/images/city_night.jpg" alt="city pond at night">
 
 
         <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
-            <div class="flex h-screen items-center">
+            <div class="flex h-[100dvh] items-center">
 
                 <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250"
                      data-frs-animate>

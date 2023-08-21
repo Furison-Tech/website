@@ -8,7 +8,7 @@
         </div>
 
         <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
-            <div class="flex h-screen items-center justify-center">
+            <div class="flex h-[100dvh] items-center justify-center">
 
                 <div  class="text-center duration-1000 delay-300 text-expand-effect"
                       style="margin-top: 14px;" data-frs-animate="1">

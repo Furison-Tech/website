@@ -1,11 +1,11 @@
 <div class="ArithmaSlide transition-slide slide-start-pos slide-start-dark" style="z-index: 1">
     <div class="relative" style="background: linear-gradient(to left, rgba(12,25,41,1) 45%, rgba(12,25,41,0.95) 53%, rgba(12,25,41,0.9) 57%,
     rgba(12,25,41,0.75) 65%, rgba(12,25,41,0.55) 100%);">
-        <img class="w-screen absolute h-screen object-cover object-top" style="z-index: -1;"
+        <img class="w-screen absolute h-[100dvh] object-cover object-top" style="z-index: -1;"
              data-frs-src="/assets/images/darkvr.jpg" alt="business man with VR headset">
 
         <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
-            <div class="table-cell align-middle md:flex h-screen items-center justify-between">
+            <div class="table-cell align-middle md:flex h-[100dvh] items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
                     <div class="driveInRight transition-none animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>
                         <h3 class="text-center md:text-left text-3xl md:text-5xl lg:text-7xl font-black text-white
