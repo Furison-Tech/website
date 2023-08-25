@@ -80,15 +80,15 @@ description: "Learn more about the bangerly service."
     </div>
 
     <div class="relative overflow-hidden bg-0c1929">
-        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
+        <div class="container mx-auto px-12 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <img class="w-full object-cover block rounded" alt="bangerly community content screen"
                      src="/assets/images/services/bangerly/screen3.jfif">
 
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Sharing Samples, Presets and Melodies</p>
-                    <p class="font-normal mt-4">
+                    <p class="font-bold text-md lg:text-xl text-center md:text-left">Sharing Samples, Presets and Melodies</p>
+                    <p class="font-normal mt-4 text-justify md:text-left">
                         As with most sample library platforms, a user can search for a sample or artist.
                         But with our platform, an artist that optionally uploads a sample can attach a MIDI file
                         (a type of file that basically contains a melody, that a DAW can use to put another synth over).
@@ -102,8 +102,8 @@ description: "Learn more about the bangerly service."
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Networking & Audience statistics</p>
-                    <p class="font-normal mt-4">
+                    <p class="font-bold text-md lg:text-xl text-center md:text-left">Networking & Audience statistics</p>
+                    <p class="font-normal mt-4 text-justify md:text-left">
                         An artists can see his popularity chart,
                         what kind of his samples are downloaded/liked the most, and how many people click on which of his social media accounts.
                         Artists can also chat with each other. These features may not be the core topic of the app, but it is important so that different producers
@@ -122,8 +122,8 @@ description: "Learn more about the bangerly service."
                      src="/assets/images/services/bangerly/screen1.jfif">
 
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Complete Sample Pack</p>
-                    <p class="font-normal mt-4">
+                    <p class="font-bold text-md lg:text-xl text-center md:text-left">Complete Sample Pack</p>
+                    <p class="font-normal mt-4 text-justify md:text-left">
                         Besides individual samples, Bangerly hosts complete sample packs that users can download.
                         Sample Packs are more popular for the at-home producer, and sometimes an artist does not want to give away his/her samples for free.
                         That's why we give artists the ability to sell their sample packs on our platform.

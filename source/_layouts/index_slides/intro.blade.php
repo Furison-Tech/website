@@ -4,7 +4,7 @@
              data-frs-src="/assets/images/code.jpg" alt="code screen on desk">
         @include('_layouts.components.rectbgsvg')
 
-        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
+        <div class="container mx-auto px-12 relative">
             <div class="flex h-[100svh] items-center">
 
                 <div class="flex flex-col w-fit mx-auto md:mx-0 md:inline-block">

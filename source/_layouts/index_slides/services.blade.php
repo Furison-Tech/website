@@ -4,7 +4,7 @@
              data-frs-src="/assets/images/city_night.jpg" alt="city pond at night">
 
 
-        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
+        <div class="container mx-auto px-12 relative">
             <div class="flex h-[100dvh] items-center">
 
                 <div class="flex flex-col w-fit mx-auto frs-hide-big fadeIn animation-forwards duration-1250"

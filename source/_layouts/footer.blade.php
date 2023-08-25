@@ -1,5 +1,5 @@
 <footer class="glassify-full w-full border-x-0 border-b-0">
-    <div class="container mx-auto px-12 md:px-8 lg:px-4 py-4 xl:py-8">
+    <div class="container mx-auto px-12 py-4 xl:py-8">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">

@@ -4,7 +4,7 @@
         <img class="w-screen absolute h-[100dvh] object-cover object-top" style="z-index: -1;"
              data-frs-src="/assets/images/darkvr.jpg" alt="business man with VR headset">
 
-        <div class="table md:block container mx-auto px-12 md:px-8 lg:px-4 relative">
+        <div class="table md:block container mx-auto px-12 relative">
             <div class="table-cell align-middle md:flex h-[100dvh] items-center justify-between">
                 <div class="inline-block w-full md:w-fit order-last">
                     <div class="driveInRight transition-none animation-forwards delay-200 w-fit mx-auto md:mx-0" data-frs-animate>

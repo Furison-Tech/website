@@ -4,10 +4,9 @@
 
         <div id="parallax-scene" class="absolute par-scene-dims bg-0c1929 opacity-0 transition-opacity duration-1000 delay-1000"
              style="z-index: -1; margin-left: -2.5vw; margin-top: -2.5vh;">
-
         </div>
 
-        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative">
+        <div class="container mx-auto px-12 relative">
             <div class="flex h-[100dvh] items-center justify-center">
 
                 <div  class="text-center duration-1000 delay-300 text-expand-effect"

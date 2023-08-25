@@ -70,7 +70,7 @@ description: "Learn more about our vision, mission expertise & skills."
     </div>
 
     <div class="relative overflow-hidden bg-0c1929">
-        <div class="container mx-auto px-12 md:px-8 lg:px-4 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
+        <div class="container mx-auto px-12 relative mb-[236px] sm:mb-[223px] md:mb-[187px] xl:mb-[219px] pt-32">
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div class="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-8 w-full md:w-auto">
@@ -145,8 +145,8 @@ description: "Learn more about our vision, mission expertise & skills."
                 </div>
 
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Back-end Development & AI</p>
-                    <p class="font-normal mt-4">
+                    <p class="font-bold text-md lg:text-xl text-center md:text-left">Back-end Development & AI</p>
+                    <p class="font-normal mt-4 text-justify md:text-left">
                         When we’re dealing with medium/large algorithms or something that is best approachable with OOP, we lean on Java & Spring.
                         For quick website setups or those that mostly rely on database logic, we prefer PHP & Laravel.
                         If we use AI to solve a problem or produce a result, we like to use Python (obviously) and Django.
@@ -162,8 +162,8 @@ description: "Learn more about our vision, mission expertise & skills."
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Persistence & Infrastructure</p>
-                    <p class="font-normal mt-4">
+                    <p class="font-bold text-md lg:text-xl text-center md:text-left">Persistence & Infrastructure</p>
+                    <p class="font-normal mt-4 text-justify md:text-left">
                         We believe that a strong foundation is key. MySQL/MariaDB is our primary database for most cases.
                         Although it's an ancient tool, it stood the test of time and fits our needs. But if the data
                         is not very relational or unorganized, mongoDB is our next best option, or even Redis in rare cases. Ofcourse,
@@ -289,8 +289,8 @@ description: "Learn more about our vision, mission expertise & skills."
                 </div>
 
                 <div class="text-white">
-                    <p class="font-bold text-md lg:text-xl">Front-end & Styling</p>
-                    <p class="font-normal mt-4">
+                    <p class="font-bold text-md lg:text-xl text-center md:text-left">Front-end & Styling</p>
+                    <p class="font-normal mt-4 text-justify md:text-left">
                         Front-end isn't something we like to do very much, but there is no good app without it.
                         We avoid frameworks like vue, react and angular most of the time, but that does not mean we don't know any javascript.
                         In fact, we have a deep understanding of javascript because many of our apps use very specific niches of javascript such as the Web Audio API or the new Web GPU.

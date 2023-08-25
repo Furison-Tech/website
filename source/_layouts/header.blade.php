@@ -1,5 +1,5 @@
-<nav class="glassify-full fixed w-full top-0 left-0 border-t-0 border-x-0" style="z-index: 9999">
-    <div class="container flex flex-wrap items-center justify-between mx-auto px-12 md:px-8 lg:px-4 py-4">
+<nav class="glassify-full fixed w-screen top-0 left-0 border-t-0 border-x-0" style="z-index: 9999">
+    <div class="container flex flex-wrap items-center justify-between mx-auto px-12 py-4">
         <div class="w-fit md:w-[100px]">
             <a class="flex items-center" href="/">
                 <span class="h-8 w-8 inline-block" >
