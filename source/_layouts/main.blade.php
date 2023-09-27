@@ -26,9 +26,20 @@
         </div>
 
         @if($page->getUrl() !== '/')
-            <div class="absolute w-screen bottom-0" style="z-index: 1;">
+            <div class="absolute w-screen bottom-0" style="z-index: 2;">
                 @include('_layouts.footer')
             </div>
+
+            <script>
+                const navbar = document.getElementById('mainNavBar');
+                window.addEventListener('scroll', () => {
+                   if (window.scrollY > 0 ){
+                       navbar.classList.add('bg-0c1929');
+                   } else {
+                       navbar.classList.remove('bg-0c1929');
+                   }
+                });
+            </script>
         @endif
     </body>
 </html>

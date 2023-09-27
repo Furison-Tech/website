@@ -1,5 +1,5 @@
 <footer class="glassify-full w-full border-x-0 border-b-0">
-    <div class="container mx-auto px-12 py-4 xl:py-8">
+    <div class="container mx-auto px-12 py-4">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">
@@ -38,14 +38,15 @@
 
                 <span class="w-0.5 h-full bg-gray-400 inline-block mx-8 rounded-full"></span>
 
-                <div class="flex flex-col md:flex-row items-center w-fit ml-auto md:ml-0">
+                <div class="flex flex-col items-end md:flex-row md:items-center w-fit ml-auto md:ml-0">
                     <p class="hidden lg:block code-font text-white">Legal ⋅ Info</p>
 
-                    <span class="text-xs md:text-base hover:text-white
+                    <span class="text-xs md:text-base hover:text-white cursor-default
                     transition-colors duration-200 text-gray-400 lg:ml-4">
                         KVK (COC) 91055083
                     </span>
-                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200 text-gray-400 md:ml-4">
+                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200
+                    text-gray-400 md:ml-4 cursor-default">
                         BTW (VAT) NL004866102B73
                     </span>
                 </div>

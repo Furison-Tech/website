@@ -14,12 +14,12 @@
               rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=6743967da2de9577f4e9eb8d4b9e87db">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=9f06f2de953d8e6df2bc9f25bb41d9cc">
         <script defer src="/assets/build/js/main.js?id=9ef407a13b5216b13a1e6fd4f9f969b0"></script>
     </head>
     <body class="w-screen overflow-x-hidden relative bg-0c1929">
 
-        <nav class="glassify-full fixed w-screen top-0 left-0 border-t-0 border-x-0" style="z-index: 9999">
+        <nav id="mainNavBar" class="fixed w-screen top-0 left-0 border-t-0 border-x-0" style="z-index: 9999">
     <div class="container flex flex-wrap items-center justify-between mx-auto px-12 py-4">
         <div class="w-fit md:w-[100px]">
             <a class="flex items-center" href="/">
@@ -440,9 +440,9 @@
 
         </div>
 
-                    <div class="absolute w-screen bottom-0" style="z-index: 1;">
+                    <div class="absolute w-screen bottom-0" style="z-index: 2;">
                 <footer class="glassify-full w-full border-x-0 border-b-0">
-    <div class="container mx-auto px-12 py-4 xl:py-8">
+    <div class="container mx-auto px-12 py-4">
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">
@@ -481,14 +481,15 @@
 
                 <span class="w-0.5 h-full bg-gray-400 inline-block mx-8 rounded-full"></span>
 
-                <div class="flex flex-col md:flex-row items-center w-fit ml-auto md:ml-0">
+                <div class="flex flex-col items-end md:flex-row md:items-center w-fit ml-auto md:ml-0">
                     <p class="hidden lg:block code-font text-white">Legal ⋅ Info</p>
 
-                    <span class="text-xs md:text-base hover:text-white
+                    <span class="text-xs md:text-base hover:text-white cursor-default
                     transition-colors duration-200 text-gray-400 lg:ml-4">
                         KVK (COC) 91055083
                     </span>
-                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200 text-gray-400 md:ml-4">
+                    <span class="text-xs md:text-base hover:text-white transition-colors duration-200
+                    text-gray-400 md:ml-4 cursor-default">
                         BTW (VAT) NL004866102B73
                     </span>
                 </div>
@@ -498,5 +499,16 @@
 </footer>
 
             </div>
+
+            <script>
+                const navbar = document.getElementById('mainNavBar');
+                window.addEventListener('scroll', () => {
+                   if (window.scrollY > 0 ){
+                       navbar.classList.add('bg-0c1929');
+                   } else {
+                       navbar.classList.remove('bg-0c1929');
+                   }
+                });
+            </script>
             </body>
 </html>

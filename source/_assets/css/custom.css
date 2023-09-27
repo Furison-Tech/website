@@ -114,3 +114,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(.36,1.14,.73,-0.3);
 }
+
+#mainNavBar{
+    transition: background-color 450ms ease-in-out;
+}
