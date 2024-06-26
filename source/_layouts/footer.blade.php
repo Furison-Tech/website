@@ -3,8 +3,8 @@
         <div class="md:flex md:justify-between items-center">
             <div class="mb-4 h-5 md:h-fit md:mb-0 flex justify-between items-center md:block">
                 <a href="/" class="flex items-center text-xs lg:text-base w-fit">
-                    <span class="self-center code-font text-gray-400 capitalize">
-                        2023
+                    <span id="current-year" class="self-center code-font text-gray-400 capitalize">
+                        YYYY
                     </span>
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -54,4 +54,8 @@
         </div>
     </div>
 </footer>
+
+<script>
+    document.getElementById('current-year').innerText = new Date().getFullYear().toString();
+</script>
 

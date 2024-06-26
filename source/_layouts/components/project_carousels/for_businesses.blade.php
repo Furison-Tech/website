@@ -5,10 +5,10 @@
     </div>
     <div class="grow font-normal text-white">
         <span class="block md:hidden lg:block">
-            Route/Appointment Planning (Q4 2024)
+            Route/Appointment Planning (in development)
         </span>
         <span class="opacity-50 hidden md:block lg:hidden cursor-not-allowed">
-            Route/Appointment Planning (Q4 2024)
+            Route/Appointment Planning (in development)
         </span>
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed

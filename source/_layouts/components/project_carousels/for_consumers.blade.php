@@ -26,10 +26,10 @@
     </div>
     <div class="grow font-normal text-white">
         <span class="block md:hidden lg:block">
-            Expanddabag (in development)
+            Expanddabag (paused)
         </span>
         <span class="opacity-50 hidden md:block lg:hidden cursor-not-allowed">
-            Expanddabag (in development)
+            Expanddabag (paused)
         </span>
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
@@ -47,10 +47,10 @@
     </div>
     <div class="grow font-normal text-white">
         <span class="block md:hidden lg:block">
-            Formula Trading (Q3 2024)
+            Gymcrease (in development)
         </span>
         <span class="opacity-50 hidden md:block lg:hidden cursor-not-allowed">
-            Formula Trading (Q3 2024)
+            Gymcrease (in development)
         </span>
     </div>
     <span class="inline-block md:hidden lg:inline-block cursor-not-allowed
